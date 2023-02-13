@@ -19,11 +19,10 @@ const Navbar = ({active}) => {
             {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
                 <li className='app__flex p-text' key={`link-${item}`}>
                     <div />
-                    <a href={`#${item}`}>{item}
-                    
-                     </a>
+                    <a href={`#${item}`}>{item}</a>
                 </li>
             ))}
+            
         </ul>
         <div className='app__navbar-menu'>
             <HiMenu onClick={() => setToggle(true)}/>
@@ -31,11 +30,14 @@ const Navbar = ({active}) => {
                 <motion.div whileInView = {{ x: [300, 0] }} transition = {{ duration: 0.60, ease: 'easeOut'}}>
                     <SlClose onClick={() => setToggle(false)}/>
                     <ul>
+                    <img src={images.logo} alt="logo" />
+                    <hr/>
                     {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
                         <li key= {item}>
                             <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                         </li>
                     ))}
+                    <hr/>
                     </ul>
                 </motion.div>
             )}
