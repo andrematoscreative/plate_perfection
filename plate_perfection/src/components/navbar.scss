@@ -57,7 +57,7 @@
 
 .line {
     background-color: var(--primary-color);
-    height:0.1rem;
+    height: 0.6px;
     left:5rem;
     right:5rem; 
     position: absolute;
@@ -73,12 +73,10 @@
     position: relative;
     margin-left: 5rem;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     background: var(--background-color);
 
     svg {
-        display: flex;
-        justify-content: center;
         width: 40px;
         height: 40px;
         color: var(--primary-color);
@@ -92,7 +90,7 @@
         z-index: 5;
         padding: 1rem;
         width: 100%;
-        height: 50vh;
+        height: 55vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -109,8 +107,26 @@
         }
 
         img {
+            margin-left: 15px;
             width: 110px;
-            padding-bottom: 40px;
+            padding-bottom: 50px;
+        }
+
+        .line1 {
+            background-color: var(--primary-color);
+            height: 0.6px;
+            width: 50%;
+            position: absolute;
+            margin-bottom: 190px;
+        }
+
+        .line2 {
+            background-color: var(--primary-color);
+            height: 0.6px;
+            width: 50%; 
+            position: absolute;
+            margin-top: 350px;
+            
         }
         
         ul {
@@ -130,7 +146,7 @@
                     font-family: var(--font-primary);
                     color: var(--primary-color);
                     text-decoration: none;
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
                     font-weight: 300;
                     transition: all 2s ease-in-out;
 

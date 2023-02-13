@@ -23,7 +23,6 @@ const Navbar = ({active}) => {
                     <a href={`#${item}`}>{item}</a>
                 </li>
             ))}
-            <div className='line'/>
         </ul>
         <div className='app__navbar-menu'>
             <HiMenu onClick={() => setToggle(true)}/>
@@ -44,6 +43,7 @@ const Navbar = ({active}) => {
                 </motion.div>
             )}
         </div>
+        <div className='line'/>
     </nav>
     )
 }
