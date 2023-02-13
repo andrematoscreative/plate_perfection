@@ -23,7 +23,7 @@ import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
 import andrematos_creative_photo from '../assets/andrematos_creative_photo.png';
-import animated_grad_bg from '../assets/animated_grad_bg.svg';
+import plate_perfection_logo_background from '../assets/plate_perfection_logo_background.png';
 import logo from '../assets/logo.png';
 import circle from '../assets/circle.svg';
 
@@ -51,9 +51,9 @@ export default {
   about03,
   about04,
   andrematos_creative_photo,
-  animated_grad_bg,
   circle,
   logo,
+  plate_perfection_logo_background,
 };
 
 /*-------header background svg's------
