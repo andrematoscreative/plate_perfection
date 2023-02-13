@@ -1,4 +1,104 @@
-#Home {
+#home {
+    position: relative;
+    background: url("../../assets/bgIMG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+  
     
-    height:1000px;
+  
+      .copyright {
+        display: none;
+      }
+    }
+
+  
+
+ 
+  
+.app__home-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+}
+  
+.app__home-text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 20%;
+    margin-left: 5rem;
+
+    .head-text {
+        font-family:var(--font-secondary);
+        font-weight: 400;
+        font-size: 4rem;
+        font-style: normal;
+        line-height: 35px;
+
+        @media screen and (max-width: 900px) {
+            font-size: 3rem;
+            line-height: 30px;
+        }
+
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+            line-height: 45px;
+        }
+    }
+    .line {
+        background-color: var(--primary-color);
+        height: 0.6px;
+        left:5rem;
+        position: absolute;
+    }
+    .p-text {
+        flex-direction: column;
+        margin-top: 3rem;
+        width: 55%;
+        text-align: left;
+        line-height: 35px;
+        font-weight: 300;
+        font-size: 1.4rem;
+
+        @media screen and (min-width: 2000px) {
+            font-size: 2rem;
+            line-height: 45px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 1.1rem;
+            line-height: 30px;
+            width: 70%;
+        }
+    }
+}
+
+.app__header-img {
+    flex: 1;
+    height: 100%;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  
+    img {
+      width: 100%;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin: 2rem 0;
+    }
 }
