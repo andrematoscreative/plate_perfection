@@ -67,12 +67,12 @@
 
 
 .app__navbar-menu {
-    z-index: 5;
+    z-index: 10;
     width: 40px;
     height: 40px;
     border-radius: 10%;
     position: relative;
-    margin-left: 5rem;
+    margin-right: 5rem;
     display: flex;
     justify-content: center;
     background: var(--background-color);
@@ -88,7 +88,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        z-index: 5;
+        z-index: 10;
         padding: 1rem;
         width: 100%;
         height: 80vh;

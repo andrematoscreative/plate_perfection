@@ -11,11 +11,12 @@ const Home = () => (
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1.5 }}
-      className="app__home"
+      className="app__home app__flex"
     >
-      <div className="app__home-text">
+      
+      <div className="app__home-text app__flex">
           <h1 className="head-text">Plate Perfection</h1>
-          <div className='line'/>
+          <div className='line1'/>
           <p className="p-text app__flex">"Savor every bite of impeccable cuisine, crafted to perfection with the finest ingredients. Experience the art of dining at Plate Perfection, where every dish is a masterpiece waiting to be savored."</p>
       </div>
     </motion.div>
