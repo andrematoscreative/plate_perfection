@@ -29,7 +29,7 @@
         font-weight: 400;
         font-size: 4rem;
         font-style: normal;
-        line-height: 35px;
+        line-height: 40px;
 
         @media screen and (max-width: 900px) {
             font-size: 3rem;
@@ -38,18 +38,26 @@
 
         @media screen and (min-width: 2000px) {
             font-size: 5rem;
-            line-height: 45px;
+            line-height: 50px;
         }
     }
-    .line1 {
+    /*.line1 {
         background-color: var(--primary-color);
         z-index: 5;
         height: 0.6px;
-        width: 19rem;
-        margin-top:0.5rem;
+        width: 407px;
+        margin-top: 1rem;
        
-        
-    }
+       /* @media screen and (max-width: 900px) {
+            width: 306px;
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 509px;
+        }
+    }*/
+
+
     .p-text {
         flex-direction: column;
         margin-top: 3rem;
@@ -64,7 +72,7 @@
             line-height: 45px;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 599px) {
             font-size: 1.1rem;
             line-height: 30px;
             width: 70%;
@@ -73,7 +81,6 @@
 }
 
 .app__home-img {
-    
     flex: 1;
     height: 100%;
     top:0;

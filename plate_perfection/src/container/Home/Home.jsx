@@ -10,7 +10,7 @@ const Home = () => (
   <div>
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 2 }}
       className="app__home app__flex"
     >
       
@@ -26,7 +26,9 @@ const Home = () => (
         src={images.plate_perfection_home_background}
         alt="profile_plate_perfection_home_background"
         className="app__home-img"
-      />
+        
+    />
+      
   </div>
 );
 
