@@ -1,6 +1,6 @@
 const productData = [
     {
-        name: "Culinary Compass",
+        name: "Plate Perfection",
         id: 1,
         category: "",
         image: `${images.plate1}`,
@@ -24,14 +24,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingrdient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
     },
     {
-        name: "Culinary Compass",
+        name: "Plate Perfection",
         id: 2,
         category: "",
         image: `${images.plate2}`,
@@ -55,13 +55,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
-    },{
-        name: "Culinary Compass",
+    },
+    {
+        name: "Plate Perfection",
         id: 3,
         category: "",
         image: `${images.plate3}`,
@@ -85,14 +86,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
     },
     {
-        name: "Culinary Compass",
+        name: "Plate Perfection",
         id: 4,
         category: "",
         image: `${images.plate1}`,
@@ -116,14 +117,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
     },
     {
-        name: "Culinary Compass",
+        name: "Plate Perfection",
         id: 5,
         category: "",
         image: `${images.plate2}`,
@@ -147,13 +148,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
-    },{
-        name: "Culinary Compass",
+    },
+    {
+        name: "Plate Perfection",
         id: 6,
         category: "",
         image: `${images.plate3}`,
@@ -177,13 +179,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
-    },{
-        name: "Culinary Compass",
+    },
+    {
+        name: "Plate Perfection",
         id: 7,
         category: "",
         image: `${images.plate1}`,
@@ -207,14 +210,14 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
     },
     {
-        name: "Culinary Compass",
+        name: "Plate Perfection",
         id: 8,
         category: "",
         image: `${images.plate2}`,
@@ -238,12 +241,13 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
-    },{
+    },
+    {
         name: "Beautiful Salad",
         id: 9,
         category: "",
@@ -268,10 +272,10 @@ const productData = [
                 id: 3,
             },
         ],
-        ingridients: [{
-            ingridient1 : "Ingridient 1",
-            ingridient2 : "Ingridient 2",
-            ingridient3 : "Ingridient 3",
+        Ingredients: [{
+            Ingredient1 : "Ingredient 1",
+            Ingredient2 : "Ingredient 2",
+            Ingredient3 : "Ingredient 3",
         }]
     },
     ]
