@@ -25,7 +25,7 @@ import about04 from '../assets/about04.png';
 import andrematos_creative_photo from '../assets/andrematos_creative_photo.png';
 import plate_perfection_logo_background from '../assets/plate_perfection_logo_background.png';
 import logo from '../assets/logo.png';
-import circle from '../assets/circle.svg';
+import plate_perfection_home_background from '../assets/plate_perfection_home_background.png';
 
 export default {
   email,
@@ -51,7 +51,7 @@ export default {
   about03,
   about04,
   andrematos_creative_photo,
-  circle,
+  plate_perfection_home_background,
   logo,
   plate_perfection_logo_background,
 };

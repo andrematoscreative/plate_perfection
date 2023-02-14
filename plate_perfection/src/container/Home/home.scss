@@ -4,19 +4,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
-  
-    
-  
-      .copyright {
-        display: none;
-      }
-    }
+}
 
-  
-
- 
-  
-.app__home-info {
+.app__home {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -30,6 +20,7 @@
 }
   
 .app__home-text {
+    z-index: 5;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -83,22 +74,23 @@
     }
 }
 
-.app__header-img {
+.app__home-img {
+    z-index: 1;
     flex: 1;
     height: 100%;
-  
+    top:0;
+    right:0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    position: relative;
+    position: absolute;
   
     img {
       width: 100%;
       object-fit: contain;
-      z-index: 1;
     }
 
     @media screen and (max-width: 1200px) {
-      margin: 2rem 0;
+      
     }
 }
