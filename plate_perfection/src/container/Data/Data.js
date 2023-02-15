@@ -9,17 +9,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -40,17 +40,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -71,17 +71,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -102,17 +102,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -133,17 +133,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -164,17 +164,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -195,17 +195,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -226,17 +226,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },
@@ -257,17 +257,17 @@ const productData = [
         price: "12,99€",
         extras: [
             {
-                name: "Extra 1",
+                name: "Ingredient Extra 1",
                 price: "3.99€",
                 id: 1,
             },
             {
-                name: "Extra 2",
+                name: "Ingredient Extra 2",
                 price: "2.99€",
                 id: 2,
             },
             {
-                name: "Extra 3",
+                name: "Ingredient Extra 3",
                 price: "1.99€",
                 id: 3,
             },

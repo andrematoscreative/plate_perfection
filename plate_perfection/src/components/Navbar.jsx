@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { HiMenu } from 'react-icons/hi';
 import { SlClose } from 'react-icons/sl';
+import {HiOutlineShoppingCart} from "react-icons/hi";
 import { motion } from 'framer-motion';
 import { images } from '../constants';
 import navbar from './navbar.scss';
@@ -18,12 +19,15 @@ const Navbar = ({active}) => {
 
         <ul className='app__navbar-links'>
             {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
+                
                 <li className='app__flex p-text' key={`link-${item}`}>
-                    <div />
+                    
                     <a href={`#${item}`}>{item}</a>
+                    {item === 'Cart' && <a href="/Cart"><HiOutlineShoppingCart className='cart-icon' /></a>}
                 </li>
             ))}
         </ul>
+        
         <div className='app__navbar-menu'>
             <HiMenu onClick={() => setToggle(true)}/>
             { toggle && (
@@ -36,6 +40,7 @@ const Navbar = ({active}) => {
                     {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
                         <li key= {item}>
                             <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
+                            {item === 'Cart' && <HiOutlineShoppingCart className='cart-icon' />}
                         </li>
                     ))}
                     <div className='line2'/>
@@ -49,3 +54,4 @@ const Navbar = ({active}) => {
 }
 
 export default Navbar
+

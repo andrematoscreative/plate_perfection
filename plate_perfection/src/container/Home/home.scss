@@ -21,7 +21,6 @@
     align-items: flex-start;
     flex-direction: column;
     margin-top: 20%;
-    margin-left: 5rem;
     position: relative;
 
     .head-text {
@@ -30,6 +29,7 @@
         font-size: 4rem;
         font-style: normal;
         line-height: 40px;
+        margin-left: 5rem;
 
         @media screen and (max-width: 900px) {
             font-size: 3rem;
@@ -41,27 +41,28 @@
             line-height: 50px;
         }
     }
-    /*.line1 {
+    .line1 {
         background-color: var(--primary-color);
         z-index: 5;
         height: 0.6px;
         width: 407px;
         margin-top: 1rem;
+        margin-left: 5rem;
        
-       /* @media screen and (max-width: 900px) {
+        @media screen and (max-width: 900px) {
             width: 306px;
         }
 
         @media screen and (min-width: 2000px) {
             width: 509px;
         }
-    }*/
-
+    }
 
     .p-text {
         flex-direction: column;
+        margin-left: 5rem;
         margin-top: 3rem;
-        width: 55%;
+        width: 50%;
         text-align: left;
         line-height: 35px;
         font-weight: 300;
@@ -70,6 +71,7 @@
         @media screen and (min-width: 2000px) {
             font-size: 2rem;
             line-height: 45px;
+            max-width: 50%;
         }
 
         @media screen and (max-width: 599px) {

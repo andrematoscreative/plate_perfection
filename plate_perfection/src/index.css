@@ -3,7 +3,7 @@
 :root {
   --font-primary: "Lato", sans-serif;
   --font-secondary: "Cormorant+Garamond", serif;
-  --primary-color: #FFF3D3;
+  --primary-color: rgb(255, 243, 211);
   --background-color: #191C20;
 }
 

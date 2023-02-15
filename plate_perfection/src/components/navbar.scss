@@ -31,6 +31,13 @@
     list-style: none;
     margin-right: 5rem;
 
+    .cart-icon {
+        margin-left: 5px;
+        vertical-align: bottom;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
     li {
         padding-left: 5rem;
         cursor: pointer;
@@ -72,14 +79,16 @@
     height: 40px;
     border-radius: 10%;
     position: relative;
-    margin-right: 5rem;
+    margin-right: 4.5rem;
     display: flex;
     justify-content: center;
 
     svg {
-        width: 40px;
-        height: 40px;
+        margin-top: 5px;
+        width: 35px;
+        height: 35px;
         color: var(--primary-color);
+        ;
     }
     
     .container {
@@ -100,8 +109,8 @@
         box-shadow: 0 0 20px rgba(255, 243, 211, 0.142);
 
         svg {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             margin: 2rem;
         }
 
