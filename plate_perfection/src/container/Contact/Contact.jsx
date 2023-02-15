@@ -6,7 +6,19 @@ import contact from './contact.scss';
 
 const Contact = () => {
   return (
-    <h2 className="head-text">Contact</h2>
+    <div>
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 2 }}
+      className="app__contact app__flex"
+    >
+      <div className="app__contact-text app__flex">
+          <h1 className="app__contact-title">Contact</h1>
+          <div className='line'/>
+          
+      </div>
+    </motion.div>
+  </div>
   )
 }
 
