@@ -18,6 +18,7 @@ const Home = () => (
           <h1 className="head-text">Plate Perfection</h1>
           <div className='line1'/>
           <p className="p-text app__flex">"Savor every bite of impeccable cuisine, crafted to perfection with the finest ingredients. Experience the art of dining at Plate Perfection, where every dish is a masterpiece waiting to be savored."</p>
+          <div className='line2'/>
       </div>
     </motion.div>
     <motion.img

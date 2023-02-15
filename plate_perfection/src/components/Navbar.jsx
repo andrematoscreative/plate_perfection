@@ -37,12 +37,13 @@ const Navbar = ({active}) => {
                     <ul>
                     <img src={images.logo} alt="logo" />
                     <div className='line1'/>
+                    
                     {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
                         <li key= {item}>
                             <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
-                            {item === 'Cart' && <HiOutlineShoppingCart className='cart-icon' />}
                         </li>
                     ))}
+                    
                     <div className='line2'/>
                     </ul>
                 </motion.div>
@@ -54,4 +55,3 @@ const Navbar = ({active}) => {
 }
 
 export default Navbar
-

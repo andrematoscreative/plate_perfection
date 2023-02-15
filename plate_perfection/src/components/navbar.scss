@@ -9,6 +9,7 @@
     position: fixed;
     z-index: 2;
 }
+
 .app__navbar-logo {
     margin-left: 5rem;
     display: flex;
@@ -24,6 +25,7 @@
         }
     }
 }
+
 .app__navbar-links {
     display: flex;
     flex: 1;
@@ -55,6 +57,10 @@
             &:hover {
                 color: var(--secondary-color); 
             }
+
+            @media screen and (min-width: 2000px) {
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -71,7 +77,6 @@
     position: absolute;
     bottom: 0;
 }
-
 
 .app__navbar-menu {
     z-index: 10;
@@ -123,7 +128,7 @@
         .line1 {
             background-color: var(--primary-color);
             height: 0.6px;
-            width: 50%;
+            width: 40%;
             position: absolute;
             margin-bottom: 180px;
         }
@@ -131,12 +136,12 @@
         .line2 {
             background-color: var(--primary-color);
             height: 0.6px;
-            width: 50%; 
+            width: 40%; 
             position: absolute;
             margin-top: 350px;
             
         }
-        
+
         ul {
             list-style: none; 
             margin-bottom: 10px;
