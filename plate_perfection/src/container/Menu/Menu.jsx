@@ -12,10 +12,12 @@ const Menu = () => (
       className="app__menu app__flex"
     >
       <div className="app__menu-container app__flex">
+        
         <div className='app__menu-title'>
           <img src={images.plate_perfection_logo} alt="plate_perfection_logo" />
           <h1>Menu</h1>
         </div>
+          
           <div className='line__menu-title'/>
           
       </div>

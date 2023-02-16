@@ -7,7 +7,7 @@
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     position: fixed;
-    z-index: 2;
+    z-index: 10;
 }
 
 .app__navbar-logo {
@@ -41,7 +41,7 @@
     }
 
     li {
-        padding-left: 5rem;
+        margin-left: 5rem;
         cursor: pointer;
         flex-direction: column;
 
