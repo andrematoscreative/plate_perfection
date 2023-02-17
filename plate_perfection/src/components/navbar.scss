@@ -53,9 +53,29 @@
             font-size: 1rem;
             font-weight: 300;
             transition: all 0.3s ease-in-out;
+            position: relative;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                height: 0.6px;
+                background-color: var(--primary-color);
+                visibility: hidden;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: all .7s ease;
+            }
 
-            &:hover {
-                color: var(--secondary-color); 
+            &:hover{
+                color: var(--primary-color);
+                
+                &::after{
+                    transform: scaleX(1);
+                    visibility: visible;
+                }
             }
 
             @media screen and (min-width: 2000px) {

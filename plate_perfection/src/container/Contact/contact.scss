@@ -8,12 +8,15 @@
 
     .plate_perfection_logo_background {
         position: absolute;
-        margin-top: 10vh;
+        z-index: 1;
+        top: 350px;
         width: 700px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 5rem;
     }
+    
     .app__contact-components {
         z-index: 5;
         position: relative;
@@ -27,7 +30,7 @@
             font-weight: 500;
             font-size: 2rem;
             text-align: left;
-            
+
         }
 
         .line2 {
@@ -37,8 +40,12 @@
             width: 100%;
             bottom: 0;
         }
-        
     }
+}
+
+.app__contact-form {
+    z-index: 10;
+    margin-top: 50px;
 }
 
 .app__contact-container {

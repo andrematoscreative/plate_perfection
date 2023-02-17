@@ -10,7 +10,6 @@ export const App = () => {
         <Home />
         <Menu />
         <Contact />
-        <Cart />
     </div>
   );
 }

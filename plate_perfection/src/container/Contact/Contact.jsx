@@ -22,10 +22,15 @@ const Contact = () => (
       
       <div className='app__contact-components'>
       
-      <h1>Plate Perfection</h1>
-      <div className='line2'/>
-      
+        <h1>Plate Perfection</h1>
+        <div className='line2'/>
+
       </div>
+      <div className='app__contact-form'>
+        <h2>Subscribe</h2>
+        
+      </div>
+      
     </motion.div>
     
     <img className='plate_perfection_logo_background' src={images.plate_perfection_logo_background} alt="plate_perfection_logo_background" />

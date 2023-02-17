@@ -27,6 +27,8 @@ const Navbar = ({active}) => {
                 </li>
             ))}
         </ul>
+
+        
         
         <div className='app__navbar-menu'>
             <HiMenu onClick={() => setToggle(true)}/>
