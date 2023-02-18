@@ -69,12 +69,14 @@ const Contact = () => {
             <button type="Subscribe">Subscribe</button>
           </form>
         
+        <div className='line3'/>
+
       </div>
       
     </motion.div>
     
     <img className='plate_perfection_logo_background' src={images.plate_perfection_logo_background} alt="plate_perfection_logo_background" />
-  
+
   </div>
   );
 };
