@@ -13,8 +13,9 @@ const Navbar = ({active}) => {
     
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
-            <img src={images.logo} alt="logo" />
-            <a href={`Home}`}> </a>
+            <a href={`Home}`}>
+                <img src={images.logo} alt="logo" />
+            </a>
         </div>
 
         <ul className='app__navbar-links'>
