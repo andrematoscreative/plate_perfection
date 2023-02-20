@@ -20,11 +20,11 @@
     .app__contact-map {
         position: absolute;
         margin-right: 5rem;
-        left: 50%;
-        top:27%;
+        left: 60%;
+        top:20%;
         flex-basis: 60%;
-        height: 400px;
-        width: 400px;
+        height: 500px;
+        width: 600px;
     }
 
     .app__contact-components {
@@ -58,11 +58,17 @@
         font-family: var(--font-primary);
         font-weight: 300;
         font-size: 1.2rem;
+        line-height: 25px;
         z-index: 5;
-        margin-top: 90px;
+        margin-top: 7rem;
         margin-left: 5rem;
-        max-width: 320px;
+        max-width: 330px;
         text-align: left;
+    }
+
+    span {
+        font-size: 1.4rem;
+        font-weight: 400;
     }
 
     form {
@@ -87,11 +93,14 @@
             input {
                 z-index: 5;
                 padding: 0.4rem;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 border-radius: 5px;
-                border: none;
-                margin-top: 0.3rem;
-                background-color: var(--primary-color);
+                border: solid 0.6px var(--primary-color);
+                margin-top: 1rem;
+                background-color: transparent;
+                color: var(--primary-color);
+                font-family: var(--font-primary);
+                font-weight: 400;
             }
         }
 
@@ -104,10 +113,15 @@
             cursor: pointer;
             background-color: var(--color-primary);
             color: var(--primary-color);
-            margin-top: 0.5rem;
-            //box-shadow: 0 0 5px rgba(255, 243, 211, 0.142);
+            box-shadow: 0 0 5px rgba(255, 243, 211, 0.483);
 
-            transition: all 0.3s ease-in-out;
+            &:hover{
+                color: var(--primary-color);
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 8px rgba(255, 243, 211, 0.955);
+            }
+
+            /*transition: all 0.3s ease-in-out;
     
     
             &::after {
@@ -131,7 +145,7 @@
                     transform: scaleX(1);
                     visibility: visible;
                 }
-            }
+            }*/
         }
     }
 }

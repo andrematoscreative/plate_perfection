@@ -55,7 +55,7 @@ const Contact = () => {
       </div>
 
       <div className='app__contact-form'>
-        <h2>Subscribe to our cuisine newsletter, keep up with our new delicious news</h2>
+        <h2><span>Subscribe</span> to our cuisine newsletter, keep up with our new delicious news!!</h2>
         
         <form onSubmit={handleSubmit}>
             <label>
@@ -66,7 +66,7 @@ const Contact = () => {
               Email:
               <input type="email" value={email} onChange={emailForm} />
             </label>
-            <button type="Subscribe">Subscribe</button>
+            <button type="Subscribe">Subscribe newsletter</button>
           </form>
         
         <div className='line3'/>
