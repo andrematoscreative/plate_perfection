@@ -17,10 +17,10 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
-import about01 from '../assets/about01.png';
-import about02 from '../assets/about02.png';
-import about03 from '../assets/about03.png';
-import about04 from '../assets/about04.png';
+import plate1 from '../assets/plate1.png';
+import plate2 from '../assets/plate2.png';
+import plate3 from '../assets/plate3.png';
+import plate4 from '../assets/plate4.png';
 
 import andrematos_creative_photo from '../assets/andrematos_creative_photo.png';
 import plate_perfection_logo_background from '../assets/plate_perfection_logo_background.png';
@@ -47,10 +47,10 @@ export default {
   sass,
   typescript,
   vue,
-  about01,
-  about02,
-  about03,
-  about04,
+  plate1,
+  plate2,
+  plate3,
+  plate4,
   andrematos_creative_photo,
   plate_perfection_home_background,
   logo,

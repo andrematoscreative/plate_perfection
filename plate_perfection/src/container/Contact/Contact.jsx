@@ -4,7 +4,7 @@ import { AppWrap } from '../../wrapper';
 import { IoMdCall } from "react-icons/io";
 import { AiOutlineMail } from "react-icons/ai";
 import { images } from '../../constants';
-import contact from './contact.scss';
+//import contact from './contact.scss';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -83,4 +83,4 @@ const Contact = () => {
   </div>
   );
 };
-export default AppWrap(Contact, 'Contact');
+//export default AppWrap(Contact, 'Contact');

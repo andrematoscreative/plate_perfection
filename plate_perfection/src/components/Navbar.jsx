@@ -19,7 +19,7 @@ const Navbar = ({active}) => {
         </div>
 
         <ul className='app__navbar-links'>
-            {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
+            {['Home', 'Menu', 'Contact2', 'Cart'].map((item) => (
                 
                 <li className='app__flex p-text' key={`link-${item}`}>
                     

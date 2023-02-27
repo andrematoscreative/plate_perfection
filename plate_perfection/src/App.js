@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Menu, Contact, Cart } from './container';
+import { Home, Menu, Contact2, Cart } from './container';
 import { Navbar } from './components';
 import './app.scss';
 
@@ -9,7 +9,7 @@ export const App = () => {
         <Navbar />
         <Home />
         <Menu />
-        <Contact />
+        <Contact2 />
     </div>
   );
 }
