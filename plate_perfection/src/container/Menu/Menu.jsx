@@ -73,7 +73,7 @@ const Menu = () => {
   const [itemsToShow, setItemsToShow] = useState(6);
 
   const loadMoreItems = () => {
-    setItemsToShow(itemsToShow + 3);
+    setItemsToShow(itemsToShow + itemsToShow);
   };
 
   return (
@@ -90,16 +90,22 @@ const Menu = () => {
           </div>
           <div className="line__menu-title" />
 
-          <div className="app__menu-cards-container">
+          <div class="app__menu-cards-container">
             {productData.slice(0, itemsToShow).map((item) => (
-              <div key={item.id} className="app__menu-card">
-                <img src={item.image} alt={item.name} className="app__menu-card-image" />
-                <h3 className="app__menu-card-name">{item.name}</h3>
-                <p className="app__menu-card-description">{item.description}</p>
-                <p className="app__menu-card-price">{item.price}</p>
+               <div key={item.id} class="app__menu-card">
+               <div class="app__menu-card-image-container">
+                   <img src={item.image} alt={item.name} class="app__menu-card-image" />
+                   <div class="app__menu-card-line"></div>
+               </div>
+                <div class="app__menu-card-info">
+                  <h3 class="app__menu-card-name">{item.name}</h3>
+                  <p class="app__menu-card-description">{item.description}</p>
+                  <p class="app__menu-card-price">{item.price}</p>
+                </div>
               </div>
             ))}
           </div>
+
 
           {itemsToShow < productData.length && (
             <button onClick={loadMoreItems} className="app__menu-load-more">

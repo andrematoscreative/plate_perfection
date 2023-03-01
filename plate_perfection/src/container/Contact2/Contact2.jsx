@@ -75,9 +75,9 @@ const Contact2 = () => {
           <div className="app__contact-map-container">
             <iframe className="app__contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Flag%20Porto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
-          <img className="plate_perfection_logo_background" src={images.plate_perfection_logo_background}alt="plate_perfection_logo_background"/>
         </div>
       </motion.div>
+      <img className="plate_perfection_logo_background" src={images.plate_perfection_logo_background}alt="plate_perfection_logo_background"/>
     </div>
   );
 };

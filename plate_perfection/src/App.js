@@ -4,6 +4,7 @@ import { Navbar } from './components';
 import './app.scss';
 
 export const App = () => {
+  
   return (
     <div className='app'>
         <Navbar />
