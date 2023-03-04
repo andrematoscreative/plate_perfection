@@ -1,160 +1,9 @@
-.app__contact {
-    height: 100vh;
+.app__contact{
     position: relative;
-
-    @media screen and (max-width: 1200px) {
-        width: 100%;
-    }
-
-    .plate_perfection_logo_background {
-        position: absolute;
-        z-index: 1;
-        top: 300px;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5rem;
-    }
-
-    .app__contact-map {
-        z-index:2;
-        position: absolute;
-        margin-right: 5rem;
-        left: 60%;
-        top:20%;
-        flex-basis: 60%;
-        height: 500px;
-        width: 600px;
-    }
-
-    .app__contact-components {
-        z-index: 5;
-        position: relative;
-        margin-left: 5rem;
-        margin-top: 2rem;
-        display: inline-block;
-        margin-bottom: 40px;
-        
-        h1 {
-            font-family:var(--font-secondary);
-            line-height: 35px;  
-            font-weight: 500;
-            font-size: 1.6rem;
-            text-align: left;
-        }
-
-        .line2 {
-            position: absolute;
-            background-color: var(--primary-color);
-            height: 0.6px;
-            width: 100%;
-            bottom: 0;
-        }
-    }
+    align-items: center;
 }
-
-.app__contact-form {
-    h2 {
-        font-family: var(--font-primary);
-        font-weight: 300;
-        font-size: 1.2rem;
-        line-height: 25px;
-        z-index: 5;
-        margin-top: 7rem;
-        margin-left: 5rem;
-        max-width: 330px;
-        text-align: left;
-    }
-
-    span {
-        font-size: 1.4rem;
-        font-weight: 400;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        z-index: 5;
-        align-items: left;
-        margin-left: 5rem;
-        margin-top: 2rem;
-        width: 320px;
-        border-radius: 5px;
-
-        label {
-            display: flex;
-            flex-direction: column;
-            z-index: 5;
-            margin-bottom: 1.2rem;
-            font-family: var(--font-primary);
-            font-weight: 300;
-            font-size: 1.3rem;
-            border-radius: 5px;
-
-            input {
-                z-index: 5;
-                padding: 0.4rem;
-                font-size: 1.1rem;
-                border-radius: 5px;
-                border: solid 0.6px var(--primary-color);
-                margin-top: 1rem;
-                background-color: transparent;
-                color: var(--primary-color);
-                font-family: var(--font-primary);
-                font-weight: 400;
-            }
-        }
-
-        button {
-            padding: 0.5rem 1rem;
-            font-family: var(--font-primary);
-            font-size: 1.2rem;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            background-color: var(--color-primary);
-            color: var(--primary-color);
-            box-shadow: 0 0 5px rgba(255, 243, 211, 0.483);
-
-            &:hover{
-                color: var(--primary-color);
-                transition: all 0.3s ease-in-out;
-                box-shadow: 0 0 8px rgba(255, 243, 211, 0.955);
-            }
-
-            transition: all 0.3s ease-in-out;
-    
-    
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                right: 0;
-                height: 0.6px;
-                background-color: var(--primary-color);
-                visibility: hidden;
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: all .7s ease;
-            }
-
-            &:hover{
-                color: var(--primary-color);
-        
-                &::after{
-                    transform: scaleX(1);
-                    visibility: visible;
-                }
-            }
-        }
-    }
-}
-
 .app__contact-container {
-    width: 100%;
-    margin: 1rem auto;
+    height: 100vh;
     position: relative;
     z-index: 5;
 
@@ -170,7 +19,6 @@
             width:35px;
             margin-right: 5px;
             margin-top: 6rem;
-            
         }
 
         h1 {
@@ -192,17 +40,86 @@
     }
 }
 
-.app__connections a {
-    position: relative;
+.app__connections {
+    z-index: 5;
     margin-left: 5rem;
-    font-family: var(--font-primary);
+    margin-top: 40px;
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+
+    svg {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+}
+
+.app__contact-form {
+    z-index: 5;
+    width: 320px;
+    margin-left: 5rem;
+    margin-top: 40px;
+
+    h2 {
+        font-family: var(--font-primary);
+        font-size: 24px;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 25px;
+        margin-top: 7rem;
+        max-width: 330px;
+        text-align: left;
+        margin-bottom: 20px;
+
+        span {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+     form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input {
+        width: 320px;
+        font-size: 1.1rem;
+    }
+
+    label {
+        width: 320px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+.app__contact-form input[type="text"],
+.app__contact-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 16px;
+    font-weight: 400;
     color: var(--primary-color);
-    line-height: 40px;
-    font-weight: 300;
-    font-size: 1.1rem;
+    background-color: transparent;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    
+}
+
+.app__contact-form input[type="text"]:focus,
+.app__contact-form input[type="email"]:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+    z-index: 5;
+
     &::after {
         content: "";
         position: absolute;
@@ -225,22 +142,109 @@
             visibility: visible;
         }
     }
+}
 
-    .telephoneNumber {
-        margin-right: 10px;
+.Subscribe_button {
+    width: 320px;
+    padding: 0.6rem;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 243, 211, 0.483);
+
+    &:hover{
+        color: var(--primary-color);
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 0 8px rgba(255, 243, 211, 0.955);
+    }
+/*
+    transition: all 0.3s ease-in-out;
+    
+    
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 0.6px;
+        background-color: var(--primary-color);
+        visibility: hidden;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all .7s ease;
     }
 
-    .email {
-        margin-right: 10px;
-    }
+    &:hover{
+        color: var(--primary-color);
+        
+        &::after{
+            transform: scaleX(1);
+            visibility: visible;
+        }
+    }*/
+}
+
+.plate_perfection_logo_background {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.line2 {
+    z-index: 5;
+    width: 150px;
+    height: 1px;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .line3 {
-    position: absolute;
+    z-index: 5;
+    position: relative;
+    box-sizing: content-box;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    height: 1px;
     background-color: var(--primary-color);
     margin-top: 10%;
-    height: 0.6px;
-    left:5rem;
-    right:5rem; 
-    z-index: 5;
+
+    @media screen and (max-width: 899px) {
+        margin-top: 10%;
+    }
+
+    @media screen and (min-width: 2000px) {
+        margin-top: 30%;
+    }
+}
+
+.app__contact-map-container {
+    z-index:5;
+    position: absolute;
+    margin-right: 5rem;
+    left: 50%;
+    top:20%;
+    flex-basis: 60%;
+
+    .app__contact-map{
+        display: flex;
+        margin-right: 5rem;
+        justify-content:flex-end;
+        height: 400px;
+        width: 400px;
+    
+        @media screen and (max-width: 899px) {
+            margin-top: 100%;
+        }
+    }
 }

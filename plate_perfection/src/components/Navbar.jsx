@@ -4,7 +4,7 @@ import { SlClose } from 'react-icons/sl';
 import {HiOutlineShoppingCart} from "react-icons/hi";
 import { motion } from 'framer-motion';
 import { images } from '../constants';
-import navbar from './navbar.scss';
+import './navbar.scss';
 
 const Navbar = ({active}) => {
     const[toggle, setToggle] = useState(false);
@@ -12,6 +12,7 @@ const Navbar = ({active}) => {
   return (
     
     <nav className='app__navbar'>
+        <div className='app__master-container app__navbar-all'>
         <div className='app__navbar-logo'>
             <a href={`Home}`}>
                 <img src={images.logo} alt="logo" />
@@ -19,7 +20,7 @@ const Navbar = ({active}) => {
         </div>
 
         <ul className='app__navbar-links'>
-            {['Home', 'Menu', 'Contact2', "Cart"].map((item) => (
+            {['Home', 'Menu', 'Contact', "Cart"].map((item) => (
                 
                 <li className='app__flex p-text' key={`link-${item}`}>
                     
@@ -31,7 +32,7 @@ const Navbar = ({active}) => {
 
         
         
-        <div className='app__navbar-menu'>
+        <div className='app__navbar-hamburguermenu'>
             <HiMenu onClick={() => setToggle(true)}/>
             { toggle && (
                 <motion.div className='container'
@@ -53,8 +54,9 @@ const Navbar = ({active}) => {
             )}
         </div>
         <div className='line'/>
+        </div>
     </nav>
     )
 }
 
-export default Navbar
+export default Navbar;

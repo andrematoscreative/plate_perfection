@@ -311,5 +311,5 @@ const productData = [
             Ingredient3 : "Ingredient 3",
         }]
     },
-    ]
-    export default productData
+]
+export default productData
