@@ -31,7 +31,7 @@ const Home = () => (
       </motion.div>
     
       <motion.img
-        whileInView={{ scale: [0, 1] }}
+        whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 2, ease: 'easeInOut' }}
         src={images.plate_perfection_home_background}
         alt="profile_plate_perfection_home_background"

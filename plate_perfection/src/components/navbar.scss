@@ -1,4 +1,5 @@
 .app__navbar {
+    max-width: 1200px;
     width: 100%;
     height:auto;
     backdrop-filter: blur(3px);
@@ -97,6 +98,7 @@
 .line {
     background-color: var(--primary-color);
     height: 1px;
+
     left:0rem;
     right:0rem; 
     position: absolute;

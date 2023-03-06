@@ -6,6 +6,7 @@
 
 
 .app__home {
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,6 +35,9 @@
 }
 
 .app__home_title {
+    margin: 0 auto;
+    max-width: 1200px;
+    
     justify-content: flex-start;
     align-items: flex-start;
     z-index: 5;
@@ -68,6 +72,8 @@
 }
 
 .app__home-text {
+    margin: 0 auto;
+    max-width: 1200px;
     z-index: 5;
     display: flex;
     justify-content: flex-start;
@@ -96,7 +102,7 @@
 .app__home-img {
     z-index: 1;
     opacity: 0.38;
-    height: 80%;
+    width: 100%;
     top:0;
     right:0;
     display: flex;
@@ -104,9 +110,8 @@
     align-items: center;
     position: absolute;
     border-radius: 5px;
-    box-shadow: -15px 0 5px rgba(0, 0, 0, 0.096);
 
-    @media screen and (max-width: 899px) {
-        height: 60%;
+    @media screen and (max-width: 930px) {
+        height: 100%;
     }
 }

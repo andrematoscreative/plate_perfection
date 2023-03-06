@@ -25,34 +25,42 @@ const Contact = () => {
 
   return (
     <div className="app__contact">
-      <motion.div
-        whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-        transition={{ duration: 2 }}
-      >
-        <div className="app__contact-container">
-            
-            <div className="app__contact-title">
+
+            <motion.div
+            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__contact-title">
               <img
                 className="plate_perfection_logo"
                 src={images.plate_perfection_logo}
                 alt="plate_perfection_logo"
               />
               <h1>Contact</h1>
-              <div className="line__contact-title" />
-            </div>
-          <div className="app__contact-information">
-           
+            </motion.div>
+        
+        <div className="app__contact-container">
+          
+            <motion.div
+            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__contact-information">
+            
             <div className="app__connections">
-              <a href="tel:+23456789">
-                <IoMdCall className="telephoneNumber" />
-                002 3456 789
-              </a>
-              <br />
-              <a href="mailto:plateperfectioncuisine@gmail.com">
+              <div>
+                <a className="test" href="tel:+23456789">
+                  <IoMdCall className="telephoneNumber" />
+                  002 3456 789
+                </a>
+              </div>
+              
+              <div>
+                <a href="mailto:plateperfectioncuisine@gmail.com">
                 <AiOutlineMail className="email" />
                 plateperfectioncuisine@gmail.com
-              </a>
+                </a>
+              </div>
             </div>
+            
             <div className="app__contact-form">
               <h2>
                 <span>Subscribe</span> to our cuisine newsletter, keep up with
@@ -70,16 +78,46 @@ const Contact = () => {
                 <button className="Subscribe_button" type="Subscribe">Subscribe newsletter</button>
               </form>
             </div>
-            <div className="line3"/>
-          </div>
-          <div className="app__contact-map-container">
+            </motion.div>
+            
+            <motion.div
+            whileInView={{ x: [200, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__contact-map-container">
             <iframe className="app__contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Flag%20Porto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-          </div>
+            </motion.div>
+            
         </div>
-      </motion.div>
-      <img className="plate_perfection_logo_background" src={images.plate_perfection_logo_background}alt="plate_perfection_logo_background"/>
+
+        <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 2, ease: 'easeInOut' }}
+        src={images.plate_perfection_logo_background}
+        alt="profile_plate_perfection_logo_background"
+        className="plate_perfection_logo_background"
+        />
+      
+        <motion.div
+        whileInView={{ scale: [0, 1]  }}
+        transition={{ duration: 2.5 }}
+        className="app__copyright">
+        <img
+        className="plate_perfection_logo"
+        src={images.plate_perfection_logo}
+        alt="plate_perfection_logo"
+        />
+        <p className='p1'> © 2023 Plate Perfection </p>
+        <p className='p2'> Made by André Matos | www.andrematoscreative.com</p>
+        <img
+        className="logo_andrematoscreative"
+        src={images.logo_andrematoscreative}
+        alt="logo_andrematoscreative"/>
+        </motion.div>
+    
     </div>
   );
 };
 
 export default AppWrap(Contact, 'Contact');
+
+

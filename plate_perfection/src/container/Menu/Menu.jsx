@@ -14,19 +14,21 @@ const Menu = () => {
 
   return (
     <div className='app__master-container'>
-      <motion.div
-        whileInView={{ y: [-200, 0], opacity: [0, 1] }}
-        transition={{ duration: 2 }}
-        className="app__menu app__flex"
-      >
-        <div className="app__menu-container app__flex">
-          <div className="app__menu-title">
-            <img src={images.plate_perfection_logo} alt="plate_perfection_logo" />
-            <h1>Menu</h1>
-          </div>
-          <div className="line__menu-title" />
-
-          <div class="app__menu-cards-container">
+     
+        <div className="app__menu-container">
+            
+            <motion.div
+            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__menu-title">
+              <img className="plate_perfection_logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
+              <h1>Menu</h1>
+            </motion.div>
+            
+            <motion.div
+            whileInView={{ x: [200, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__menu-cards-container">
             {productData.slice(0, itemsToShow).map((item) => (
                <div key={item.id} class="app__menu-card">
                <div class="app__menu-card-image-container">
@@ -40,6 +42,7 @@ const Menu = () => {
                 </div>
               </div>
             ))}
+            </motion.div>
           </div>
 
           {itemsToShow < productData.length && (
@@ -48,8 +51,7 @@ const Menu = () => {
             </button>
           )}
         </div>
-      </motion.div>
-    </div>
+      
   );
 };
 
