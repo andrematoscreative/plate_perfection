@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="app__contact">
+    <div id="contact" className="app__contact">
 
             <motion.div
             whileInView={{ x: [-200, 0], opacity: [0, 1] }}

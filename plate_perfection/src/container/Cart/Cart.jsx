@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion';
-import { AppWrap } from '../../wrapper';
-//import { images } from '../../constants';
-import cart from './cart.scss';
+import React, { useState, useEffect, useContext } from "react";
+import "./cart.scss";
+import { AiOutlineShoppingCart, AiOutlineMinusCircle } from "react-icons/ai";
+import { HiMenu, HiOutlineShoppingCart } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import { HiX } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { images } from "../../constants";
 
 const Cart = () => {
   return (
-    <h2 className="head-text">Cart</h2>
+  <div>
+    <p className= "li__cart">Cart<HiOutlineShoppingCart/></p>
+    
+  </div>
   )
 }
 
-export default AppWrap(Cart, 'Cart');
+export default Cart;
