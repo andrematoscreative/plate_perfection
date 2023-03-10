@@ -25,25 +25,21 @@ const Contact = () => {
 
   return (
     <div id="contact" className="app__contact">
+      <motion.div
+      whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+      transition={{ duration: 2 }}
+      className="app__contact-title">
+      <img className="plate_perfection_logo"
+      src={images.plate_perfection_logo}
+      alt="plate_perfection_logo"/>
+      <h1>Contact</h1>
+      </motion.div>
 
-            <motion.div
-            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ duration: 2 }}
-            className="app__contact-title">
-              <img
-                className="plate_perfection_logo"
-                src={images.plate_perfection_logo}
-                alt="plate_perfection_logo"
-              />
-              <h1>Contact</h1>
-            </motion.div>
-        
         <div className="app__contact-container">
-          
-            <motion.div
-            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ duration: 2 }}
-            className="app__contact-information">
+          <motion.div
+          whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+          transition={{ duration: 2 }}
+          className="app__contact-information">
             
             <div className="app__connections">
               <div>
@@ -86,7 +82,6 @@ const Contact = () => {
             className="app__contact-map-container">
             <iframe className="app__contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Flag%20Porto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </motion.div>
-            
         </div>
 
         <motion.img
@@ -98,22 +93,29 @@ const Contact = () => {
         />
       
         <motion.div
-        whileInView={{ scale: [0, 1]  }}
+        whileInView={{ scale: [0, 1] }}
         transition={{ duration: 2.5 }}
         className="app__copyright">
-        <img
-        className="plate_perfection_logo"
-        src={images.plate_perfection_logo}
-        alt="plate_perfection_logo"
-        />
-        <p className='p1'> © 2023 Plate Perfection </p>
-        <p className='p2'> Made by André Matos | www.andrematoscreative.com</p>
-        <img
-        className="logo_andrematoscreative"
-        src={images.logo_andrematoscreative}
-        alt="logo_andrematoscreative"/>
+          <motion.div
+          whileInView={{ scale: [0, 1] }}
+          transition={{ duration: 2.5 }}
+          className='line__bottom'>
+          </motion.div>
+          <div className="plate_perfection-copyright">
+            <img className="plate_perfection_logo"
+            src={images.plate_perfection_logo}
+            alt="plate_perfection_logo"/>
+            <p className='p1'> © 2023 Plate Perfection </p>
+          </div>
+          <a href="https://www.andrematoscreative.com" target="_blank">
+            <div className="andrematoscreative-copyright">
+              <img className="logo_andrematoscreative"
+              src={images.logo_andrematoscreative}
+              alt="logo_andrematoscreative"/>
+              <p className='p2'> Made by André Matos | www.andrematoscreative.com</p>
+            </div>
+          </a>  
         </motion.div>
-    
     </div>
   );
 };

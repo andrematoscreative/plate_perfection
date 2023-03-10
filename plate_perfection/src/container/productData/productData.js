@@ -8,7 +8,7 @@ const productData = [
         image: `${images.plate1}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "10,99€",
+        price: "€60,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -39,7 +39,7 @@ const productData = [
         image: `${images.plate2}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "14,99€",
+        price: "€34,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -68,9 +68,9 @@ const productData = [
         id: 3,
         category: "",
         image: `${images.plate3}`,
-        description: "Descriptive text to entice the client to click Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        description: "Descriptive text to entice the client to click Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "22,99€",
+        price: "€52,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -101,7 +101,7 @@ const productData = [
         image: `${images.plate4}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "16,99€",
+        price: "€36,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -132,7 +132,7 @@ const productData = [
         image: `${images.plate1}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€48,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -163,7 +163,7 @@ const productData = [
         image: `${images.plate3}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€51,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -194,7 +194,7 @@ const productData = [
         image: `${images.plate4}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€34,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -225,7 +225,7 @@ const productData = [
         image: `${images.plate2}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€38,99",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -256,7 +256,7 @@ const productData = [
         image: `${images.plate3}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€50,45€",
         extras: [
             {
                 name: "Ingredient Extra 1",
@@ -287,7 +287,7 @@ const productData = [
         image: `${images.plate3}`,
         description: "Descriptive text to entice the client to click",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        price: "12,99€",
+        price: "€40,50",
         extras: [
             {
                 name: "Ingredient Extra 1",

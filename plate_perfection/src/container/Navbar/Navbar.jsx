@@ -122,24 +122,22 @@ const Navbar = ({ active }) => {
                   <div className='line1' />
   
                   <li>
-                    <Link to='/Home' onClick={() => { setToggle(false); }}>
+                    <Link to='/#home' onClick={() => { setToggle(false); }}>
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link to='/Menu' onClick={() => { setToggle(false); }}>
+                    <Link to='/#menu' onClick={() => { setToggle(false); }}>
                       Menu
                     </Link>
                   </li>
                   <li>
-                    <Link to='/Contact' onClick={() => { setToggle(false); }}>
+                    <Link to='/#Contact' onClick={() => { setToggle(false); }}>
                       Contact
                     </Link>
                   </li>
                   <li>
-                    <Link to='/Cart' onClick={() => { setToggle(false); }}>
-                      Cart <HiOutlineShoppingCart className='cart-icon' />
-                    </Link>
+                    <Cart/>
                   </li>
 
                   <div className='line2' />
