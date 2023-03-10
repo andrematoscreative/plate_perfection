@@ -320,11 +320,9 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 899px) {
         flex-direction: column;
     }
-        
-    
 
     .app__connections {
         display: flex;
@@ -561,11 +559,6 @@
             
         }
     }
-    
-    
-
-
-
 }
 
 /*.app__copyright {
