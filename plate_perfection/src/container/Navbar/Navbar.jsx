@@ -136,7 +136,7 @@ const Navbar = ({ active }) => {
                       Contact
                     </Link>
                   </li>
-                  <li>
+                  <li className='app__flex p-text' key={`link-cart`}>
                     <Cart/>
                   </li>
 

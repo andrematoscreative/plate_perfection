@@ -107,7 +107,7 @@ const Contact = () => {
             alt="plate_perfection_logo"/>
             <p className='p1'> © 2023 Plate Perfection </p>
           </div>
-          <a href="https://www.andrematoscreative.com" target="_blank">
+          <a href="https://www.andrematoscreative.com" target="_blank" style={{ textDecoration: 'none' }}>
             <div className="andrematoscreative-copyright">
               <img className="logo_andrematoscreative"
               src={images.logo_andrematoscreative}
