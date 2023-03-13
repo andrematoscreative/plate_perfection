@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import { IoMdCall } from 'react-icons/io';
@@ -9,6 +9,14 @@ import './contact.scss';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://63f0a399ff1b45a1a43e7d50.mockapi.io/Contacts')
+      .then(response => response.json())
+      .then(data => setContacts(data))
+      .catch(error => console.error(error));
+  }, []);
 
   const nameForm = event => {
     setName(event.target.value);

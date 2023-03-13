@@ -83,7 +83,6 @@ const Navbar = ({ active }) => {
       }
     }, [location]);
 
-  
     return (
       <nav className='app__navbar'>
         <div className='app__master-container app__navbar-all'>
@@ -103,8 +102,11 @@ const Navbar = ({ active }) => {
             <li className={`app__flex p-text ${active === 'Contact' ? 'active' : ''}`}>
               <Link to='/#Contact'>Contact</Link>
             </li>
-            <li className='app__flex p-text' key={`link-cart`}>
-                <Cart/>
+            <li className={`app__flex p-text ${active === 'Cart' ? 'active' : ''}`}>
+              <Link to='/Cart'>
+                Cart
+                <HiOutlineShoppingCart />
+              </Link>
             </li>
           </ul>
 
@@ -136,10 +138,12 @@ const Navbar = ({ active }) => {
                       Contact
                     </Link>
                   </li>
-                  <li className='app__flex p-text' key={`link-cart`}>
-                    <Cart/>
+                  <li className={`app__flex p-text ${active === 'Cart' ? 'active' : ''}`}>
+                    <Link to='/Cart'>
+                      Cart
+                      <HiOutlineShoppingCart />
+                    </Link>
                   </li>
-
                   <div className='line2' />
                 </ul>
               </motion.div>

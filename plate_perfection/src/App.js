@@ -21,7 +21,7 @@ export default App;*/
 import React from 'react';
 
 import { Route, Routes } from 'react-router-dom'
-import { Navbar, Principal, Cart } from './container';
+import { Navbar, Principal, Productdetails, Cart } from './container';
 import './app.scss';
 
 export const App = () => {
@@ -30,6 +30,7 @@ export const App = () => {
     <div className='app'>
       <Navbar/>
       <Routes>
+      <Route path="/Productdetails/:id" element={<Productdetails />}></Route>
         <Route path='/' element={<Principal />} />
         <Route path='/Cart' element={<Cart />} />
       </Routes>
