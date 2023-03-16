@@ -60,7 +60,7 @@ const Home = () => (
         transition={{ duration: 2 }}
         className='app__home_title'>
             <h1 className="head-text">Plate Perfection</h1>
-            <div className='line1'/>
+            <div className='app__line-title'/>
         </motion.div>
 
         <motion.div

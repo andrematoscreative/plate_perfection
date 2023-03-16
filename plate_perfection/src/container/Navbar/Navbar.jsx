@@ -1,65 +1,3 @@
-/*import React, { useState } from 'react'
-import { SlClose } from 'react-icons/sl';
-import { HiMenu, HiOutlineShoppingCart } from "react-icons/hi";
-import { motion } from 'framer-motion';
-import { images } from '../constants';
-import './navbar.scss';
-
-const Navbar = ({active}) => {
-    const[toggle, setToggle] = useState(false);
-
-  return (
-    
-    <nav className='app__navbar'>
-        <div className='app__master-container app__navbar-all'>
-        <div className='app__navbar-logo'>
-            <a href={`Home}`}>
-                <img src={images.logo} alt="logo" />
-            </a>
-        </div>
-
-        <ul className='app__navbar-links'>
-            {['Home', 'Menu', 'Contact', "Cart"].map((item) => (
-                
-                <li className='app__flex p-text' key={`link-${item}`}>
-                    
-                    <a href={`#${item}`}>{item}</a>
-                    {item === 'Cart' && <a href="/Cart"><HiOutlineShoppingCart className='cart-icon' /></a>}
-                </li>
-            ))}
-        </ul>
-
-        
-        
-        <div className='app__navbar-hamburguermenu'>
-            <HiMenu onClick={() => setToggle(true)}/>
-            { toggle && (
-                <motion.div className='container'
-                whileInView = {{ x: [300, 0] }} transition = {{ duration: 0.6, ease: 'easeOut'}}>
-                    <SlClose onClick={() => setToggle(false)}/>
-                    <ul>
-                    <img src={images.logo} alt="logo" />
-                    <div className='line1'/>
-                    
-                    {['Home', 'Menu', 'Contact', 'Cart'].map((item) => (
-                        <li key= {item}>
-                            <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
-                        </li>
-                    ))}
-                    
-                    <div className='line2'/>
-                    </ul>
-                </motion.div>
-            )}
-        </div>
-        <div className='line'/>
-        </div>
-    </nav>
-    )
-}
-
-export default Navbar;*/
-
 import React, { useState, useEffect } from 'react';
 import { SlClose } from 'react-icons/sl';
 import { HiMenu, HiOutlineShoppingCart } from 'react-icons/hi';
@@ -102,7 +40,7 @@ const Navbar = ({ active }) => {
             <li className={`app__flex p-text ${active === 'Contact' ? 'active' : ''}`}>
               <Link to='/#Contact'>Contact</Link>
             </li>
-            <li className={`app__flex p-text ${active === 'Cart' ? 'active' : ''}`}>
+            <li className={`app__flex p-text cart-desktop ${active === 'Cart' ? 'active' : ''}`}>
               <Link to='/Cart'>
                 Cart
                 <HiOutlineShoppingCart />
@@ -118,9 +56,9 @@ const Navbar = ({ active }) => {
                 whileInView={{ x: [300, 0] }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-                <SlClose onClick={() => setToggle(false)} />
+                <SlClose className='close__button' onClick={() => setToggle(false)} />
                 <ul>
-                  <img src={images.logo} alt='logo' />
+                  <img src={images.plate_perfection_logo} alt="plate_perfection_logo" />
                   <div className='line1' />
   
                   <li>
@@ -138,7 +76,7 @@ const Navbar = ({ active }) => {
                       Contact
                     </Link>
                   </li>
-                  <li className={`app__flex p-text ${active === 'Cart' ? 'active' : ''}`}>
+                  <li className={`app__flex p-text cart-mobile ${active === 'Cart' ? 'active' : ''}`}>
                     <Link to='/Cart'>
                       Cart
                       <HiOutlineShoppingCart />
