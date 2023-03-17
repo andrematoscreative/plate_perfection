@@ -9,7 +9,7 @@ import { images } from "../../constants";
 
 const Cart = () => {
   return (
-  <div>
+  <div className="reservation-page">
     <p className= "li__cart">Cart<HiOutlineShoppingCart/></p>
     
   </div>

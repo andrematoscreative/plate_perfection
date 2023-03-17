@@ -24,23 +24,23 @@ const Navbar = ({ active }) => {
     return (
       <nav className='app__navbar'>
         <div className='app__master-container app__navbar-all'>
-          <div className='app__navbar-logo'>
+          <div>
             <Link to='/#home'>
-              <img src={images.logo} alt='logo plate perfection' />
+              <img className='app__navbar-logo' src={images.plate_perfection_logo} alt='logo plate perfection' />
             </Link>
           </div>
 
           <ul className='app__navbar-links'>
-            <li className={`app__flex p-text ${active === 'Home' ? 'active' : ''}`}>
+            <li className={`${active === 'Home' ? 'active' : ''}`}>
               <Link to='/#home'>Home</Link>
             </li>
-            <li className={`app__flex p-text ${active === 'Menu' ? 'active' : ''}`}>
+            <li className={`${active === 'Menu' ? 'active' : ''}`}>
               <Link to='/#menu'>Menu</Link>
             </li>
-            <li className={`app__flex p-text ${active === 'Contact' ? 'active' : ''}`}>
+            <li className={`${active === 'Contact' ? 'active' : ''}`}>
               <Link to='/#Contact'>Contact</Link>
             </li>
-            <li className={`app__flex p-text cart-desktop ${active === 'Cart' ? 'active' : ''}`}>
+            <li className={`cart-desktop ${active === 'Cart' ? 'active' : ''}`}>
               <Link to='/Cart'>
                 Cart
                 <HiOutlineShoppingCart />
@@ -49,7 +49,7 @@ const Navbar = ({ active }) => {
           </ul>
 
           <div className='app__navbar-hamburguermenu'>
-            <HiMenu onClick={() => setToggle(true)} />
+            <HiMenu className='app__hmenu-icon'onClick={() => setToggle(true)} />
             {toggle && (
               <motion.div
                 className='container'
@@ -76,8 +76,8 @@ const Navbar = ({ active }) => {
                       Contact
                     </Link>
                   </li>
-                  <li className={`app__flex p-text cart-mobile ${active === 'Cart' ? 'active' : ''}`}>
-                    <Link to='/Cart'>
+                  <li className={`cart-mobile ${active === 'Cart' ? 'active' : ''}`}>
+                    <Link className ='cart-mobile-link'to='/Cart'>
                       Cart
                       <HiOutlineShoppingCart />
                     </Link>
@@ -87,7 +87,7 @@ const Navbar = ({ active }) => {
               </motion.div>
             )}
           </div>
-          <div className='line' />
+          <div className="line"/>
         </div>
       </nav>
     );

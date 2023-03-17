@@ -6,4 +6,5 @@ export { default as productData } from './productData/productData';
 export { default as Navbar} from './Navbar/Navbar';
 export { default as Principal} from './Principal/Principal';
 export { default as Productdetails} from './Productdetails/Productdetails';
+export { default as Reservation} from './Reservation/Reservation';
 

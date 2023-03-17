@@ -8,12 +8,20 @@ import plate1 from '../assets/plate1.png';
 import plate2 from '../assets/plate2.png';
 import plate3 from '../assets/plate3.png';
 import plate4 from '../assets/plate4.png';
+import plate5 from '../assets/plate5.png';
+import plate6 from '../assets/plate6.png';
+import plate7 from '../assets/plate7.png';
+import plate8 from '../assets/plate8.png';
 
 export default {
   plate1,
   plate2,
   plate3,
   plate4,
+  plate5,
+  plate6,
+  plate7,
+  plate8,
   plate_perfection_home_background,
   logo,
   plate_perfection_logo_background,

@@ -29,10 +29,14 @@ const Menu = () => {
         <motion.div
           whileInView={{ x: [-200, 0], opacity: [0, 1] }}
           transition={{ duration: 2 }}
-          className="app__menu-title"
-        >
+          className="app__menu-title">
           <img className="plate_perfection_logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
           <h1>Menu</h1>
+            <motion.div
+              whileInView={{ scale: [0, 1]  }}
+              transition={{ duration: 3 }}
+              className='menu__title-line'>
+            </motion.div>
         </motion.div>
 
         <motion.div
@@ -54,10 +58,8 @@ const Menu = () => {
         <motion.div
           whileInView={{ x: [200, 0], opacity: [0, 1] }}
           transition={{ duration: 2 }}
-          className="app__menu-cards-container"
-        >
+          className="app__menu-cards-container">
           {filteredProductData.slice(0, itemsToShow).map((item) => (
-            
             <Link to={`/productdetails/${item.id}`} className="app__menu-card-link">
               <div key={item.id} class="app__menu-card">
                 <div className="app__menu-card-image-container">
@@ -69,9 +71,7 @@ const Menu = () => {
                   <p className="app__menu-card-description">{item.description}</p>
                   <p className="app__menu-card-price">{item.price}</p>
                   <p className="app__menu-card-details">Click for details</p>
-                  
-                    <button className="add__to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
-                  
+                  <button className="add__to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
                 </div>
               </div>
             </Link>
