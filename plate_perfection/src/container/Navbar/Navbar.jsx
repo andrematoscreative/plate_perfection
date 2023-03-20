@@ -38,9 +38,9 @@ const Navbar = ({ active }) => {
               <Link to='/#menu'>Menu</Link>
             </li>
             <li className={`${active === 'Contact' ? 'active' : ''}`}>
-              <Link to='/#Contact'>Contact</Link>
+              <Link to='/#Contact'>Contacts</Link>
             </li>
-            <li className={`cart-desktop ${active === 'Cart' ? 'active' : ''}`}>
+            <li className={`cart__desktop ${active === 'Cart' ? 'active' : ''}`}>
               <Link to='/Cart'>
                 Cart
                 <HiOutlineShoppingCart />
@@ -73,10 +73,10 @@ const Navbar = ({ active }) => {
                   </li>
                   <li>
                     <Link to='/#Contact' onClick={() => { setToggle(false); }}>
-                      Contact
+                      Contacts
                     </Link>
                   </li>
-                  <li className={`cart-mobile ${active === 'Cart' ? 'active' : ''}`}>
+                  <li className={`cart__mobile ${active === 'Cart' ? 'active' : ''}`}>
                     <Link className ='cart-mobile-link'to='/Cart'>
                       Cart
                       <HiOutlineShoppingCart />

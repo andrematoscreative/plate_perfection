@@ -9,7 +9,7 @@ import './contact.scss';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [contacts, setContacts] = useState([]);
+  const [contact, setContacts] = useState([]);
 
   useEffect(() => {
     fetch('https://63f0a399ff1b45a1a43e7d50.mockapi.io/Contacts')
@@ -41,10 +41,10 @@ const Contact = () => {
         <img className="plate_perfection_logo"
         src={images.plate_perfection_logo}
         alt="plate_perfection_logo"/>
-        <h1>Contact</h1>
+        <h1>Contacts</h1>
           <motion.div
             whileInView={{ scale: [0, 1]  }}
-            transition={{ duration: 3 }}
+            transition={{ duration: 2.5 }}
             className='contact__title-line'>
           </motion.div>
         </motion.div>
@@ -92,8 +92,7 @@ const Contact = () => {
               
               <motion.div
               whileInView={{ x: [200, 0], opacity: [0, 1] }}
-              transition={{ duration: 2 }}
-              className="app__contact-map-container">
+              transition={{ duration: 2 }}>
               <iframe className="app__contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Flag%20Porto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </motion.div>
           </div>
@@ -108,19 +107,21 @@ const Contact = () => {
         
           <motion.div
           whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 0 }}
           className="app__copyright">
             <motion.div
             whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 2.5 }}
+            transition={{ duration: 2 }}
             className='line__bottom'>
             </motion.div>
+            
             <div className="plate_perfection-copyright">
               <img className="plate_perfection_logo"
               src={images.plate_perfection_logo}
               alt="plate_perfection_logo"/>
               <p className='p1'> © 2023 Plate Perfection </p>
             </div>
+            
             <a href="https://www.andrematoscreative.com" target="_blank" style={{ textDecoration: 'none' }}>
               <div className="andrematoscreative-copyright">
                 <img className="logo_andrematoscreative"
@@ -128,8 +129,18 @@ const Contact = () => {
                 alt="logo_andrematoscreative"/>
                 <p className='p2'> Made by André Matos | www.andrematoscreative.com</p>
               </div>
-            </a>  
+            </a>
           </motion.div>
+          
+          <motion.img
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 4, ease: 'easeInOut' }}
+          src={images.plate_perfection_contacts_background}
+          alt="plate_perfection_contacts_background"
+          className="app__backgroundimg-contacts"
+          />
+          <div className='image__contact-overlay'/>
+      
       </div>
     </div>
   );

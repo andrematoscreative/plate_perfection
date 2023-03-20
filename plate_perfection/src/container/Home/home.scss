@@ -88,9 +88,10 @@
     width: 300px;
     margin-top: 250px;
     padding: 0.8rem;
-    font-family: var(--font-primary);
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+    //font-style: italic;
+    font-weight: 400;
+    font-size: 1.3rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -106,7 +107,7 @@
 
     @media screen and (max-width: 400px) {
         width: 230px;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         margin-top: 130px;
     }
 }

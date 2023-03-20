@@ -34,7 +34,7 @@ const Menu = () => {
           <h1>Menu</h1>
             <motion.div
               whileInView={{ scale: [0, 1]  }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 2.5 }}
               className='menu__title-line'>
             </motion.div>
         </motion.div>
@@ -61,18 +61,16 @@ const Menu = () => {
           className="app__menu-cards-container">
           {filteredProductData.slice(0, itemsToShow).map((item) => (
             <Link to={`/productdetails/${item.id}`} className="app__menu-card-link">
-              <div key={item.id} class="app__menu-card">
-                <div className="app__menu-card-image-container">
-                  <img src={item.image} alt={item.name} className="app__menu-card-image" />
-                  <div className="app__menu-card-line"></div>
-                </div>
-                <div className="app__menu-card-info">
-                  <h3 className="app__menu-card-name">{item.name}</h3>
-                  <p className="app__menu-card-description">{item.description}</p>
-                  <p className="app__menu-card-price">{item.price}</p>
-                  <p className="app__menu-card-details">Click for details</p>
-                  <button className="add__to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
-                </div>
+              <div key={item.id} className="app__menu-card-image-container">
+                <img src={item.image} alt={item.name} className="app__menu-card-image"/>
+                <div className="app__menu-card-line"></div>
+              </div>
+              <div className="app__menu-card-info">
+                <h3 className="app__menu-card-name">{item.name}</h3>
+                <p className="app__menu-card-description">{item.description}</p>
+                <p className="app__menu-card-price">{item.price}</p>
+                <p className="app__menu-card-details">Click for details</p>
+                <button className="add__to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
               </div>
             </Link>
           ))}

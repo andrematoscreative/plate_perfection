@@ -28,7 +28,7 @@ const Home = () => (
         whileInView={{ x: [-200, 0], opacity: [0, 1]  }}
         transition={{ duration: 2 }}>
           <Link className='app__reservation-button' to='/reservation'>
-              <div>Table reservations</div>
+              <div>Reservations</div>
           </Link>
         </motion.div>
 
@@ -44,7 +44,7 @@ const Home = () => (
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 4, ease: 'easeInOut' }}
         src={images.plate_perfection_home_background}
-        alt="profile_plate_perfection_home_background"
+        alt="plate_perfection_home_background"
         className="app__home-img"
       />
       <div className='image__overlay'/>
