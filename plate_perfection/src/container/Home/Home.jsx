@@ -10,11 +10,15 @@ const Home = () => (
     <div className='app__master-container'>
       <div className="app__home-content ">
         <motion.div
-        whileInView={{ x: [-250, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-200, 0], opacity: [0, 1] }}
         transition={{ duration: 2 }}
         className='app__home_title'>
             <h1 className="head-text">Plate Perfection</h1>
-            <div className='app__line-title'/>
+            <motion.div
+              whileInView={{ scale: [0, 1]  }}
+              transition={{ duration: 3.5 }}
+              className='app__line-title'>
+            </motion.div>
         </motion.div>
 
         <motion.div
