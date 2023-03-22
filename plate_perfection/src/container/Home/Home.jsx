@@ -10,7 +10,7 @@ const Home = () => (
     <div className='app__master-container'>
       <div className="app__home-content ">
         <motion.div
-        whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-250, 0], opacity: [0, 1] }}
         transition={{ duration: 2 }}
         className='app__home_title'>
             <h1 className="head-text">Plate Perfection</h1>
@@ -18,14 +18,14 @@ const Home = () => (
         </motion.div>
 
         <motion.div
-        whileInView={{ x: [200, 0], opacity: [0, 1] }}
+        whileInView={{ x: [250, 0], opacity: [0, 1] }}
         transition={{ duration: 2.5 }}
         className="app__home-text ">
             <p>"Savor every bite of impeccable cuisine, crafted to perfection with the finest ingredients. Experience the art of dining at Plate Perfection, where every dish is a masterpiece waiting to be savored."</p>
         </motion.div>
 
         <motion.div
-        whileInView={{ x: [-200, 0], opacity: [0, 1]  }}
+        whileInView={{ x: [100, 0], opacity: [0, 1]  }}
         transition={{ duration: 2 }}>
           <Link className='app__reservation-button' to='/reservation'>
               <div>Reservations</div>
@@ -34,7 +34,7 @@ const Home = () => (
 
         <motion.div
         whileInView={{ scale: [0, 1]  }}
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 2 }}
         className='app__home-line'>
         </motion.div>
       </div>
@@ -42,7 +42,7 @@ const Home = () => (
 
       <motion.img
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 4, ease: 'easeInOut' }}
+        transition={{ duration: 3, ease: 'easeInOut' }}
         src={images.plate_perfection_home_background}
         alt="plate_perfection_home_background"
         className="app__home-img"

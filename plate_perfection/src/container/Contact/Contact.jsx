@@ -35,7 +35,7 @@ const Contact = () => {
     <div id="contact"> 
       <div className="app__contact">
         <motion.div
-        whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 2 }}
         className="app__contact-title">
         <img className="plate_perfection_logo"
@@ -51,7 +51,7 @@ const Contact = () => {
 
           <div className="app__contact-container">
             <motion.div
-            whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ duration: 2 }}
             className="app__contact-information">
               
@@ -91,7 +91,7 @@ const Contact = () => {
               </motion.div>
               
               <motion.div
-              whileInView={{ x: [200, 0], opacity: [0, 1] }}
+              whileInView={{ x: [100, 0], opacity: [0, 1] }}
               transition={{ duration: 2 }}>
               <iframe className="app__contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Flag%20Porto&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </motion.div>
