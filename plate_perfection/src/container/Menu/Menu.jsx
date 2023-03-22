@@ -24,26 +24,27 @@ const Menu = () => {
   };
 
   return (
-    <div id="menu">
-      <div className="app__menu-container">
-        <motion.div
-          whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-          transition={{ duration: 2 }}
-          className="app__menu-title">
-          <img className="plate_perfection_logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
-          <h1>Menu</h1>
+    <div id="menu" className='app__menu'>
+      <div className="app__master-container">
+
+        <div className="app__menu-title">
+          <motion.div  
+          whileInView={{ y: [-85, 0], opacity: [0, 1] }}
+          transition={{ duration: 2 }} 
+          className='app__menu-title-header'>
+            <img className="app__menu-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
+            <h1 className='menu-title'>Menu</h1>
             <motion.div
               whileInView={{ scale: [0, 1]  }}
               transition={{ duration: 2.5 }}
               className='menu__title-line'>
             </motion.div>
-        </motion.div>
-
-        <motion.div
+          </motion.div>
+          
+          <motion.div
           whileInView={{ opacity: [0, 1] }}
           transition={{ duration: 2.5 }}
-          className="app__menu-search"
-        >
+          className="app__menu-search">
           <form>
             <BiSearch className="search-icon" />
             <input
@@ -53,31 +54,37 @@ const Menu = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </form>
-        </motion.div>
-
-        <motion.div
-          whileInView={{ x: [200, 0], opacity: [0, 1] }}
-          transition={{ duration: 2 }}
+          </motion.div>
+        </div>
+        
+        {filteredProductData.slice(0, itemsToShow).map((item) => (
+          <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ duration: 1.3 }}
           className="app__menu-cards-container">
-          {filteredProductData.slice(0, itemsToShow).map((item) => (
-            <Link to={`/productdetails/${item.id}`} className="app__menu-card-link">
+            <Link to={`/productdetails/${item.id}`} className="app__menu-card">
+              
               <div key={item.id} className="app__menu-card-image-container">
                 <img src={item.image} alt={item.name} className="app__menu-card-image"/>
-                <div className="app__menu-card-line"></div>
+                <div className="app__menu-card-line"/>
               </div>
-              <div className="app__menu-card-info">
-                <h3 className="app__menu-card-name">{item.name}</h3>
-                <p className="app__menu-card-description">{item.description}</p>
-                <p className="app__menu-card-price">{item.price}</p>
-                <p className="app__menu-card-details">Click for details</p>
-                <button className="add__to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
+              
+              <div className="app__menu__card__info">
+                <div className="app__menu__card__info-name">{item.name}
+                  <div className='app__menu__card__info-name-line'/>
+                </div>
+                <p className="app__menu__card__info-description">{item.description}</p>
+                <p className="app__menu__card__info-price">{item.price}</p>
+                <p className="app__menu__card__info-details">Click for more details</p>
+                <button className="app__menu__card__info-add-to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
               </div>
+
             </Link>
+          </motion.div>
           ))}
-        </motion.div>
       </div>
 
-      <div className="load__more-container">
+      <div className="btnload__more-container">
         {itemsToShow < filteredProductData.length && (
           <button onClick={loadMoreItems} className="app__menu-load-more">
             Load More
