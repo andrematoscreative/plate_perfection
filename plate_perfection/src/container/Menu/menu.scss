@@ -81,11 +81,14 @@
 .app__menu-cards-container {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
     flex-wrap: wrap;
-    gap: 1rem;
-    
-    justify-content: center;
+    width: 100%;
     margin-bottom: 1rem;
+    
+    @media screen and (max-width: 1214px) {
+        justify-content:center;
+    }
 }
 
 .app__menu-card {
@@ -93,7 +96,7 @@
     gap: 1rem;
     border: 1px solid rgba(255, 243, 211, 0.13);
     padding: 1rem;
-    width: 550px;
+    width: 583px;
     border-radius: 10px;
     text-decoration: none;
     color: var(--primary-color);
@@ -121,7 +124,7 @@
     display: flex;
 
     .app__menu-card-image{
-        width: 230px;
+        width: 250px;
         border-radius: 5px;
 
         @media (max-width: 400px) {
@@ -145,10 +148,10 @@
 
     &-name {
         font-family: var(--font-secondary);
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-style: italic;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         @media (max-width: 400px) {
             font-size: 1rem;
@@ -193,7 +196,7 @@
     &-details {
         font-size: 0.8rem;
         font-weight: 300;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         @media (max-width: 400px) {
             font-size: 0.6rem;

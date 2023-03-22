@@ -8,7 +8,7 @@ import './menu.scss';
 import { productData } from '../../container';
 
 const Menu = () => {
-  const [itemsToShow, setItemsToShow] = useState(6);
+  const [itemsToShow, setItemsToShow] = useState(4);
   const [searchTerm, setSearchTerm] = useState('');
 
   const loadMoreItems = () => {
@@ -29,7 +29,7 @@ const Menu = () => {
 
         <div className="app__menu-title">
           <motion.div  
-          whileInView={{ y: [-85, 0], opacity: [0, 1] }}
+          whileInView={{ y: [-35, 0], opacity: [0, 1] }}
           transition={{ duration: 2 }} 
           className='app__menu-title-header'>
             <img className="app__menu-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
@@ -57,11 +57,11 @@ const Menu = () => {
           </motion.div>
         </div>
         
+        <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 1.3 }}
+        className="app__menu-cards-container">
         {filteredProductData.slice(0, itemsToShow).map((item) => (
-          <motion.div
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ duration: 1.3 }}
-          className="app__menu-cards-container">
             <Link to={`/productdetails/${item.id}`} className="app__menu-card">
               
               <div key={item.id} className="app__menu-card-image-container">
@@ -80,8 +80,8 @@ const Menu = () => {
               </div>
 
             </Link>
-          </motion.div>
           ))}
+          </motion.div>
       </div>
 
       <div className="btnload__more-container">

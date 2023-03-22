@@ -18,7 +18,7 @@ const Home = () => (
         </motion.div>
 
         <motion.div
-        whileInView={{ x: [350, 0], opacity: [0, 1] }}
+        whileInView={{ x: [250, 0], opacity: [0, 1] }}
         transition={{ duration: 2.5 }}
         className="app__home-text ">
             <p>"Savor every bite of impeccable cuisine, crafted to perfection with the finest ingredients. Experience the art of dining at Plate Perfection, where every dish is a masterpiece waiting to be savored."</p>
