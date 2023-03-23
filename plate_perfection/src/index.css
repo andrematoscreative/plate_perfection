@@ -4,7 +4,10 @@
   --font-primary: "Lato", sans-serif;
   --font-secondary: "Playfair Display", serif;
   --primary-color: #EDDBAD;
+  --primary-color-soft: rgba(255, 243, 211, 0.31);
+  --primary-color-bright: rgba(255, 243, 211, 0.955);
   --background-color: #191C20;
+  --background-color-soft:rgba(41, 41, 41, 0.939);
 }
 
 * {
