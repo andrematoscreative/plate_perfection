@@ -34,7 +34,9 @@ const Productdetails = ({ card, onClose, item }) => {
           </div>
 
           <div className="app__menu-card-details-info-container">
-            <div className="app__menu-card-details-info-container-name">{product.name}</div>
+            <div className="app__menu-card-details-info-container-name">{product.name}
+            <div className="app__menu-card-details-info-container-name-line"/>
+            </div>
             <p className="app__menu-card-details-info-container-description">{product.description}</p>
             <p className="app__menu-card-details-info-container-body">{product.body}</p>
             <p className="app__menu-card-details-info-container-price">{product.price}</p> 
