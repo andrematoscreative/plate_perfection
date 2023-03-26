@@ -141,7 +141,7 @@ const Productdetails = ({ card, onClose, item }) => {
             className="app__menu-card-details-extras-container"
           >
             <h1 className="app__menu-card-details-extras-container-title">
-            Would you like additional extras with your order?{" "}
+            Would you like additional ingredients with your order?{" "}
             </h1>
             {product.extras.map((ext) => (
               <div
@@ -178,7 +178,7 @@ const Productdetails = ({ card, onClose, item }) => {
                   })
                 }
                 className="app__menu-card-details-extras-container-extras-button-container-button">
-                Add to Cart
+                Add Plate to Cart
               </button>
             </div>
           </motion.div>

@@ -1,4 +1,4 @@
- .app__menu-card-details{
+.app__menu-card-details{
     min-height: 100vh;
     background-color: var(--background-color);
 
@@ -27,72 +27,71 @@
             border: 1px solid var(--primary-color-soft);
             padding: 2rem;
     
-        &-title {
-            text-align: center;
-            font-family: var(--font-primary);
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            font-weight: 400;
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-    
-        &-extras {
-            margin-bottom: 1.5rem;
-    
-                &-button {
-                    padding: 0.4rem;
-                    font-family: var(--font-primary);
-                    font-size: 0.8rem;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    background-color: transparent;
-                    color: var(--primary-color);
-                    border: 1px solid var(--primary-color-soft);
-            
-                    &:hover{
-                        color: var(--primary-color);
-                        transition: all 0.5s ease-in-out;
-                        border: 1px solid var(--primary-color-bright);
-                    }
-                }
-
-            &-price {
-                margin-top: 0.5rem;
-                font-size: 1.1rem;
-                font-weight: 500;
-                font-style: italic;
+            &-title {
+                text-align: center;
                 font-family: var(--font-primary);
-            }
-
-            &-button-container {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-    
-              &-button {
-                width: 150px;
-                padding: 0.6rem;
-                font-family: var(--font-primary);
-                font-size: 0.8rem;
-                border-radius: 5px;
-                cursor: pointer;
-                background-color: transparent;
                 color: var(--primary-color);
-                border: 1px solid var(--primary-color-soft);
-        
-                &:hover{
-                    color: var(--primary-color);
-                    transition: all 0.5s ease-in-out;
-                    border: 1px solid var(--primary-color-bright);
-                
-                }
-              }
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-style: italic;
+                margin-bottom: 2rem;
             }
-          }
-        }
-      }
+    
+            &-extras {
+                margin-bottom: 1.5rem;
+        
+                    &-button {
+                        padding: 0.4rem;
+                        font-family: var(--font-primary);
+                        font-size: 0.8rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        background-color: transparent;
+                        color: var(--primary-color);
+                        border: 1px solid var(--primary-color-soft);
+                
+                        &:hover{
+                            color: var(--primary-color);
+                            transition: all 0.5s ease-in-out;
+                            border: 1px solid var(--primary-color-bright);
+                        }
+                    }
 
+                    &-price {
+                        margin-top: 0.5rem;
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        font-style: italic;
+                        font-family: var(--font-primary);
+                    }
+
+                    &-button-container {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+            
+                        &-button {
+                            width: 150px;
+                            padding: 0.6rem;
+                            font-family: var(--font-primary);
+                            font-size: 0.8rem;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            background-color: transparent;
+                            color: var(--primary-color);
+                            border: 1px solid var(--primary-color-soft);
+                    
+                            &:hover{
+                                color: var(--primary-color);
+                                transition: all 0.5s ease-in-out;
+                                border: 1px solid var(--primary-color-bright);
+                            
+                            }
+                        }
+                    }
+            }
+        }
+    }
 }
 
 .app__menu-card-details-header {
