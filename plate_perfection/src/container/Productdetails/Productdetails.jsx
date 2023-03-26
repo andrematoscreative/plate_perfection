@@ -63,7 +63,7 @@ const Productdetails = ({ card, onClose, item }) => {
               <img className="app__menu-card-details-header-title-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
               <h1 className='app__menu-card-details-header-title-title'>Product Detail</h1>
               <motion.div
-                whileInView={{ scale: [0, 1]  }}
+                whileInView={{ scale: [0, 1] }}
                 transition={{ duration: 3 }}
                 className='app__menu-card-details-header-title-line'>
               </motion.div>
@@ -81,7 +81,7 @@ const Productdetails = ({ card, onClose, item }) => {
             <div className="app__menu-card-details-info-container">
               <div className="app__menu-card-details-info-container-name">{product.name}
                 <motion.div
-                  whileInView={{ x: [50, 0]}}
+                  whileInView={{scale: [0, 1]}}
                   transition={{ duration: 2.5 }}
                   className="app__menu-card-details-info-container-name-line">
                 </motion.div>
@@ -143,6 +143,7 @@ const Productdetails = ({ card, onClose, item }) => {
             <h1 className="app__menu-card-details-extras-container-title">
             Would you like additional ingredients with your order?{" "}
             </h1>
+
             {product.extras.map((ext) => (
               <div
                 className="app__menu-card-details-extras-container-extras"
@@ -162,10 +163,17 @@ const Productdetails = ({ card, onClose, item }) => {
               </div>
             ))}
             {extraAdded && 
-                  <p className="app__menu-card-details-extras-container-extras-price">
-                  Extra ingredient added
-                </p>
-                }
+              <p className="app__menu-card-details-extras-container-extras-price">
+              Extra ingredient added
+              </p>
+            }
+
+            <motion.div
+              whileInView={{scale: [0, 1]}}
+              transition={{ duration: 2 }}
+              className='app__menu-card-details-extras-container-extras-line'>
+            </motion.div>
+
             <div className="app__menu-card-details-extras-container-extras-button-container">
               
               <button

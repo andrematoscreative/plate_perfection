@@ -17,16 +17,31 @@
         &-container {
             background-color: var( --background-color);
             position: absolute;
-            left: 50%;
-            top: 30%;
+            height: 500px;
+            top: 20%;
+            left: 40%;
             z-index: 10;
-            width: 550px;
-            margin-left: -10%;
-            padding: 1rem;
+            width: 400px;
             border-radius: 10px;
             border: 1px solid var(--primary-color-soft);
             padding: 2rem;
-    
+            
+            @media screen and (max-width: 1199px) {
+                left: 33%;
+            }
+
+            @media screen and (max-width: 899px) {
+                left: 28%;
+            }
+
+            @media screen and (max-width: 515px) {
+                left: 11%;
+            }
+
+            @media screen and (max-width: 400px) {
+                left: 0%;
+            }
+
             &-title {
                 text-align: center;
                 font-family: var(--font-primary);
@@ -36,59 +51,69 @@
                 font-style: italic;
                 margin-bottom: 2rem;
             }
-    
+
             &-extras {
                 margin-bottom: 1.5rem;
-        
+
+                &-button {
+                    width: 150px;
+                    padding: 0.4rem;
+                    font-family: var(--font-primary);
+                    font-size: 0.8rem;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    background-color: transparent;
+                    color: var(--primary-color);
+                    border: 1px solid var(--primary-color-soft);
+                
+                    &:hover{
+                        color: var(--primary-color);
+                        transition: all 0.5s ease-in-out;
+                        border: 1px solid var(--primary-color-bright);
+                    }
+                }
+
+                &-line {
+                    position: absolute;
+                    margin-top: 2rem;
+                    width: 83%;
+                    height: 1px;
+                    background-color: var(--primary-color-soft);
+                }
+
+                &-price {
+                    margin-top: 0.5rem;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    font-style: italic;
+                    font-family: var(--font-primary);
+                }
+
+                &-button-container {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+            
                     &-button {
-                        padding: 0.4rem;
+                        width: 250px;
+                        padding: 0.8rem;
                         font-family: var(--font-primary);
-                        font-size: 0.8rem;
+                        font-size: 1rem;
                         border-radius: 5px;
                         cursor: pointer;
                         background-color: transparent;
                         color: var(--primary-color);
-                        border: 1px solid var(--primary-color-soft);
-                
-                        &:hover{
-                            color: var(--primary-color);
-                            transition: all 0.5s ease-in-out;
-                            border: 1px solid var(--primary-color-bright);
-                        }
-                    }
-
-                    &-price {
-                        margin-top: 0.5rem;
-                        font-size: 1.1rem;
-                        font-weight: 500;
-                        font-style: italic;
-                        font-family: var(--font-primary);
-                    }
-
-                    &-button-container {
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-end;
-            
-                        &-button {
-                            width: 150px;
-                            padding: 0.6rem;
-                            font-family: var(--font-primary);
-                            font-size: 0.8rem;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            background-color: transparent;
-                            color: var(--primary-color);
-                            border: 1px solid var(--primary-color-soft);
+                        border: 1px solid var(--primary-color);
+                        margin-top: 4rem;
                     
-                            &:hover{
-                                color: var(--primary-color);
-                                transition: all 0.5s ease-in-out;
-                                border: 1px solid var(--primary-color-bright);
-                            
-                            }
+                        &:hover{
+                            color: var(--primary-color-bright);
+                            transition: all 0.5s ease-in-out;
+                            box-shadow: 0 0 5px var(--primary-color-bright);
+
                         }
                     }
+                }
             }
         }
     }
@@ -99,9 +124,13 @@
     justify-content: center;
     align-items: center;
     padding-top: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     position: relative;
     flex-direction: column;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 3rem;
+    }
 }
 
 .app__menu-card-details-header-title {
@@ -148,19 +177,21 @@
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 1rem;
-    
 }
 
 .app__menu-card-details-image-container {
     display: flex;
 
     &-image {
-        max-width: 500px;
+        max-width: 520px;
         border-radius: 10px;
 
         @media (max-width: 1199px) {
             margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 899px) {
+            max-width: 500px;
         }
         
         @media (max-width: 515px) {
@@ -173,9 +204,13 @@
     max-width: 600px;
     //border: 1px solid var(--primary-color-soft);
     //padding: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     border-radius: 10px;
     justify-content: space-between;
+
+    @media (max-width: 1199px) {
+        margin-top: 1rem;
+    }
 
     @media (max-width: 899px) {
         max-width: 500px;
@@ -190,12 +225,13 @@
         font-size: 1.7rem;
         font-style: italic;
         font-weight: 600;
+        width: 192px;
 
         &-line {
             width: 100%;
             height: 1px;
             margin-top: 0.3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.3rem;
             background-color: var(--primary-color-soft);
         }
     }
@@ -204,7 +240,7 @@
         font-size: 1rem;
         font-weight: 300;
         font-style: italic;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.3rem;
 
         @media (max-width: 515px) {
             font-size: 0.9rem;
@@ -215,19 +251,19 @@
         font-size: 1.05rem;
         font-weight: 300;
         line-height: 25px;
-        margin-bottom: 3rem;
+        margin-bottom: 2.2rem;
 
         @media (max-width: 515px) {
             font-size: 1rem;
             line-height: 23px;
-            margin-bottom: 2rem;
+            
         }
     }
 
     &-price {
         font-size: 1.1rem;
         font-weight: 500;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         
         @media (max-width: 515px) {
             margin-bottom: 1.5rem;
@@ -239,6 +275,7 @@
         font-style: italic;
         font-weight: 300;
         line-height: 30px;
+        margin-bottom: 1.6rem;
 
         @media (max-width: 515px) {
             font-size: 1rem;
@@ -249,19 +286,19 @@
     &-add__to-cart-button {
         margin-left: 78%;
         width: 130px;
-        padding: 0.4rem;
+        padding: 0.6rem;
         font-family: var(--font-primary);
-        font-size: 0.8rem;
+        font-size: 1rem;
         border-radius: 5px;
         cursor: pointer;
         background-color: transparent;
         color: var(--primary-color);
-        border: 1px solid var(--primary-color-soft);
+        border: 1px solid var(--primary-color);
 
         &:hover{
             color: var(--primary-color);
             transition: all 0.5s ease-in-out;
-            border: 1px solid var(--primary-color-bright);
+            box-shadow: 0 0 5px var(--primary-color-bright);
         }
 
         @media (max-width: 899px) {
@@ -278,12 +315,16 @@
 .app__menu-card-details-downline {
     width: 100%;
     height: 1px;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
     background-color: var(--primary-color);
 
-    @media (max-width: 515px) {
-        margin-top: 1.5rem;
+    @media (max-width: 1199px) {
+        margin-top: 3rem;
+    }
+
+    @media (max-width: 899px) {
+        margin-top: 2rem;
     }
 
 }
