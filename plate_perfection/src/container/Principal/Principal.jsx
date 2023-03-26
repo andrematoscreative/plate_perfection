@@ -6,7 +6,7 @@ const Principal = () => {
     <div id="home">
       <Home/>
       <Menu/>
-      
+      <Contact/>
     </div>
   )
 }

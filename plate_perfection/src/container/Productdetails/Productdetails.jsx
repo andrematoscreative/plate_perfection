@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import MyContext from "../context";
 import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
-import { AiFillTwitterCircle, AiFillFacebook, AiFillInstagram} from "react-icons/ai";
+import { AiFillTwitterCircle, AiFillFacebook, AiOutlineInstagram} from "react-icons/ai";
 import { images } from '../../constants';
 import "./productdetails.scss";
 import { productData } from '..';
@@ -115,7 +115,7 @@ const Productdetails = ({ card, onClose, item }) => {
               <p className="app__menu-card-details-share-container-title">Share your perfect moment</p>
               <div className="app__menu-card-details-share-container-icons">
                 <a onClick={() => window.open("https://www.Instagram.com", "Instagram", "width=600,height=400")}>
-                <AiFillInstagram />
+                <AiOutlineInstagram />
                 </a>
                 <a onClick={() => window.open("https://www.twitter.com", "Twitter", "width=600,height=400")}>
                 <AiFillTwitterCircle />
