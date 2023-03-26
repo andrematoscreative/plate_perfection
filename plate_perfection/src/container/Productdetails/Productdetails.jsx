@@ -100,7 +100,7 @@ const Productdetails = ({ card, onClose, item }) => {
                 </div>
                 ))}
 
-                <button className="app__menu-card-details-info-container-add__to-cart-button" onClick={() => setToggle(!toggle)}>Add item to cart</button>
+                <button className="app__menu-card-details-info-container-add__to-cart-button" onClick={() => setToggle(!toggle)}>Add to Order</button>
                 
             </div>
               
@@ -178,7 +178,7 @@ const Productdetails = ({ card, onClose, item }) => {
                   })
                 }
                 className="app__menu-card-details-extras-container-extras-button-container-button">
-                Add to Order
+                Add to Cart
               </button>
             </div>
           </motion.div>
