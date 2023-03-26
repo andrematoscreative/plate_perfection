@@ -163,7 +163,7 @@ const Productdetails = ({ card, onClose, item }) => {
             ))}
             {extraAdded && 
                   <p className="app__menu-card-details-extras-container-extras-price">
-                  Extra added
+                  Extra ingredient added
                 </p>
                 }
             <div className="app__menu-card-details-extras-container-extras-button-container">
