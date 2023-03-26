@@ -6,7 +6,7 @@ import { images } from '../../constants';
 import './home.scss';
 
 const Home = () => (
-  <div className='app__home'>
+  <div id="home" className='app__home'>
     <div className='app__master-container'>
       <div className="app__home-content ">
         <motion.div
@@ -53,7 +53,6 @@ const Home = () => (
       />
       <div className='image__overlay'/>
   </div>
-  
 );
 
 export default AppWrap(Home, 'Home');

@@ -76,7 +76,8 @@ const Menu = () => {
                 <p className="app__menu__card__info-description">{item.description}</p>
                 <p className="app__menu__card__info-details">Click for more details</p>
                 <p className="app__menu__card__info-price">{item.price}</p>
-                <button className="app__menu__card__info-add-to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
+                
+                <button className="app__menu__card__info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button>
               </div>
 
             </Link>
