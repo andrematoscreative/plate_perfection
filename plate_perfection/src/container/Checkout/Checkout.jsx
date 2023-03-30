@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import "./checkout.scss";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
@@ -146,3 +146,4 @@ const Checkout = () => {
 };
 
 export default Checkout;
+ */
