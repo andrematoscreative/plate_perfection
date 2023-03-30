@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { SlClose } from 'react-icons/sl';
 import { HiMenu, HiOutlineShoppingCart } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { Link, useLocation } from 'react-router-dom';
+import MyContext from "../context";
 import Cart from '../Cart/Cart';
 import './navbar.scss';
 
 const Navbar = ({ active }) => {
     const [toggle, setToggle] = useState(false);
     const location = useLocation();
+    const { cart } = useContext(MyContext);
+    
     
     useEffect(() => {
       if (location.hash) {
@@ -43,7 +46,7 @@ const Navbar = ({ active }) => {
             <li className={`cart__desktop ${active === 'Cart' ? 'active' : ''}`}>
               <Link to='/Cart'>
                 Cart
-                <HiOutlineShoppingCart />
+                <HiOutlineShoppingCart /> <p className="app__navbar-cartcounter">{cart.length}</p>
               </Link>
             </li>
           </ul>
@@ -79,7 +82,7 @@ const Navbar = ({ active }) => {
                   <li className={`cart__mobile ${active === 'Cart' ? 'active' : ''}`}>
                     <Link className ='cart-mobile-link'to='/Cart'>
                       Cart
-                      <HiOutlineShoppingCart />
+                      <HiOutlineShoppingCart /> <p className="app__hmenu-cartcounter">{cart.length}</p>
                     </Link>
                   </li>
                   <div className='line2' />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Checkout.scss";
+import "./checkout.scss";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
 
@@ -42,7 +42,7 @@ const Checkout = () => {
         >
           <img
             className="app__checkout__header__logo"
-            src={images.logo__dark}
+            src={images.plate_perfection_logo}
             alt="logo"
           />
           <h1 className="app__checkout__header__title">Checkout </h1>

@@ -27,17 +27,17 @@ const Menu = () => {
     <div id="menu" className='app__menu'>
       <div className="app__master-container">
 
-        <div className="app__menu-title">
+        <div className="app__menu-header">
           <motion.div  
           whileInView={{ y: [-35, 0], opacity: [0, 1] }}
           transition={{ duration: 2 }} 
-          className='app__menu-title-header'>
-            <img className="app__menu-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
-            <h1 className='menu-title'>Menu</h1>
+          className='app__menu-header-title'>
+            <img className="app__menu-header-title-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
+            <h1 className='app__menu-header-title-title'>Menu</h1>
             <motion.div
               whileInView={{ scale: [0, 1]  }}
               transition={{ duration: 2.5 }}
-              className='menu__title-line'>
+              className='app__menu-header-title-line'>
             </motion.div>
           </motion.div>
           
@@ -69,15 +69,15 @@ const Menu = () => {
                 <div className="app__menu-card-line"/>
               </div>
               
-              <div className="app__menu__card__info">
-                <div className="app__menu__card__info-name">{item.name}
-                  <div className='app__menu__card__info-name-line'/>
+              <div className="app__menu-card-info">
+                <div className="app__menu-card-info-name">{item.name}
+                  <div className='app__menu-card-info-name-line'/>
                 </div>
-                <p className="app__menu__card__info-description">{item.description}</p>
-                <p className="app__menu__card__info-details">Click for more details</p>
-                <p className="app__menu__card__info-price">{item.price}</p>
+                <p className="app__menu-card-info-description">{item.description}</p>
+                <p className="app__menu-card-info-details">Click for more details</p>
+                <p className="app__menu-card-info-price">{item.price}</p>
                 
-                <button className="app__menu__card__info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button>
+                <button className="app__menu-card-info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button>
               </div>
 
             </Link>

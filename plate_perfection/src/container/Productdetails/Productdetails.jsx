@@ -58,13 +58,13 @@ const Productdetails = ({ card, onClose, item }) => {
           <div className="app__menu-card-details-header">
             <motion.div  
             whileInView={{ y: [-35, 0], opacity: [0, 1] }}
-            transition={{ duration: 2 }} 
+            transition={{ duration: 2, ease: 'easeInOut' }} 
             className='app__menu-card-details-header-title'>
               <img className="app__menu-card-details-header-title-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
-              <h1 className='app__menu-card-details-header-title-title'>Product Detail</h1>
+              <h1 className='app__menu-card-details-header-title-title'>Product details</h1>
               <motion.div
                 whileInView={{ scale: [0, 1] }}
-                transition={{ duration: 3 }}
+                transition={{ duration: 2,ease: 'easeInOut' }}
                 className='app__menu-card-details-header-title-line'>
               </motion.div>
             </motion.div>
@@ -73,16 +73,19 @@ const Productdetails = ({ card, onClose, item }) => {
           <div className="app__menu-card-details-container">
             
             <div className="app__menu-card-details-image-container">
-              <motion.div whileInView={{opacity: [0, 1] }} transition={{ duration: 3 }}>
+              <motion.div whileInView={{y: [-30, 0], opacity: [0, 1] }} transition={{ duration: 2 ,ease: 'easeInOut'}}>
                 <img src={product.image} alt={product.name} className="app__menu-card-details-image-container-image" />
               </motion.div>
             </div>
-
-            <div className="app__menu-card-details-info-container">
+            
+            <motion.div
+            whileInView={{ y: [30, 0], opacity: [0, 1]  }}
+            transition={{ duration: 2,ease: 'easeInOut' }}
+            className="app__menu-card-details-info-container">
               <div className="app__menu-card-details-info-container-name">{product.name}
                 <motion.div
                   whileInView={{scale: [0, 1]}}
-                  transition={{ duration: 2.5 }}
+                  transition={{ duration: 2,ease: 'easeInOut' }}
                   className="app__menu-card-details-info-container-name-line">
                 </motion.div>
               </div>
@@ -101,12 +104,11 @@ const Productdetails = ({ card, onClose, item }) => {
                 ))}
 
                 <button className="app__menu-card-details-info-container-add__to-cart-button" onClick={() => setToggle(!toggle)}>Add to Order</button>
-                
-            </div>
+            </motion.div>
               
               <motion.div
                   whileInView={{scale: [0, 1]}}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 2,ease: 'easeInOut' }}
                   className='app__menu-card-details-downline'>
               </motion.div>
               
@@ -139,8 +141,8 @@ const Productdetails = ({ card, onClose, item }) => {
             }}
           />
           <motion.div
-            whileInView={{ x: [100, 0], opacity: [0, 1]}}
-            transition={{ duration: 1, ease: 'easeOut'}}
+            whileInView={{ x: [70, 0], opacity: [0, 1]}}
+            transition={{ duration: 1, ease: 'easeInOut'}}
             className="app__menu-card-details-extras-container"
           >
             <h1 className="app__menu-card-details-extras-container-title">
@@ -173,7 +175,7 @@ const Productdetails = ({ card, onClose, item }) => {
 
             <motion.div
               whileInView={{scale: [0, 1]}}
-              transition={{ duration: 2 }}
+              transition={{ duration: 2, ease: 'easeInOut' }}
               className='app__menu-card-details-extras-container-extras-line'>
             </motion.div>
 
@@ -195,9 +197,7 @@ const Productdetails = ({ card, onClose, item }) => {
           </motion.div>
         </div>
       )}
-
     </div>
-    
     );
   };
 

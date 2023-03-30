@@ -11,37 +11,37 @@ const Home = () => (
       <div className="app__home-content ">
         <motion.div
         whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-        transition={{ duration: 2 }}
-        className='app__home_title'>
-            <h1 className="head-text">Plate Perfection</h1>
+        transition={{ duration: 2, ease: 'easeInOut' }}
+        className='app__home-content-title'>
+            <h1 className="app__home-content-title-title">Plate Perfection</h1>
             <motion.div
               whileInView={{ scale: [0, 1]  }}
-              transition={{ duration: 3.5 }}
-              className='app__line-title'>
+              transition={{ duration: 3, ease: 'easeInOut' }}
+              className='app__home-content-title-line'>
             </motion.div>
         </motion.div>
 
         <motion.div
         whileInView={{ x: [250, 0], opacity: [0, 1] }}
-        transition={{ duration: 2.5 }}
-        className="app__home-text ">
+        transition={{ duration: 2.5, ease: 'easeInOut' }}
+        className="app__home-content-text ">
             <p>"Savor every bite of impeccable cuisine, crafted to perfection with the finest ingredients. Experience the art of dining at Plate Perfection, where every dish is a masterpiece waiting to be savored."</p>
         </motion.div>
 
         <motion.div
         whileInView={{ x: [100, 0], opacity: [0, 1]  }}
-        transition={{ duration: 2 }}>
-          <Link className='app__reservation-button' to='/reservation'>
+        transition={{ duration: 2, ease: 'easeInOut' }}>
+          <Link className='app__home-content-reservation-button' to='/reservation'>
               <div>Reservations</div>
           </Link>
         </motion.div>
 
+      </div>
         <motion.div
         whileInView={{ scale: [0, 1]  }}
-        transition={{ duration: 2 }}
-        className='app__home-line'>
+        transition={{ duration: 2, ease: 'easeInOut' }}
+        className='app__home-content-linebottom'>
         </motion.div>
-      </div>
     </div>
 
       <motion.img
@@ -49,9 +49,9 @@ const Home = () => (
         transition={{ duration: 3, ease: 'easeInOut' }}
         src={images.plate_perfection_home_background}
         alt="plate_perfection_home_background"
-        className="app__home-img"
+        className="app__home-content-backgroundimg"
       />
-      <div className='image__overlay'/>
+      <div className='app__home-content-backgroundimg-overlay'/>
   </div>
 );
 

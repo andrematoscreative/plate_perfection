@@ -1,15 +1,12 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./cart.scss";
-import { AiOutlineShoppingCart, AiOutlineMinusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
-import { images } from '../../constants';
-import MyContext from "../context";
+import { images } from "../../constants";
 
 const Cart = () => {
-  const [toggle, setToggle] = useState(false);
-  const { cart, setCart } = useContext(MyContext);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
   const storage = localStorage.getItem("cart");
 
   const removeFromCart = (id, i) => {
@@ -18,18 +15,18 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
     if (updatedCart.length === 0) {
-      localStorage.removeItem("cart");
+      localStorage.clear();
     }
   };
 
-  function removeExtras(item, idExtra) {
+  function removeExtras(item, extraIndex) {
     const updatedCart = Object.values(cart);
-    updatedCart[item].extras.extra.splice(idExtra, 1);
+    updatedCart[item].extras.extra.splice(extraIndex, 1);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
 
-  const calculateTotalSpent = () => {
+  const priceTotal = () => {
     let total = 0;
     cart.forEach((item) => {
       total += parseFloat(item.price.replace(",", ".").replace("€", ""));
@@ -45,60 +42,52 @@ const Cart = () => {
   }, [storage]);
 
   return (
-    <div className="app__cart">
-      <button className="app__cart__link" onClick={() => setToggle(!toggle)}>
-        Cart <AiOutlineShoppingCart />
-      </button>
-      {toggle && (
-        <div className="app__cart__container">
-          <div
-            className="app__cart__container__left"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <motion.div
-            whileInView={{ x: [250, 0] }}
-            transition={{ duration: 1 }}
-            className="app__cart__items"
-          >
-            <HiX
-              onClick={() => setToggle(false)}
-              className="app__cart__container__close"
+    <div className="app__mobile-cart">
+      <div className="app__master-container">
+        <div className="app__mobile__cart__container">
+          <div className="app__mobile__cart__header">
+            <img
+              className="app__mobile__cart__header__logo"
+              src={images.plate_perfection_logo}
+              alt="logo"
             />
+            <h1 className="app__mobile__cart__header__title">Cart</h1>
+          </div>
+          <div className="app__mobile__cart__items">
             {cart.map((item, index) => (
-              <div className="app__cart__items__item" key={index}>
-                <div className="app__cart__items__item__header">
-                  <p className="app__cart__items__item__header__name">
+              <div className="app__mobile__cart__item" key={item.id}>
+                <div className="app__mobile__cart__item__header">
+                  <p className="app__mobile__cart__item__header__name">
                     {item.name}
                   </p>
-                  <p className="app__cart__items__item__header__price">
+                  <p className="app__mobile__cart__item__header__price">
                     {item.price}
                   </p>
                 </div>
                 <div>
                   {item.extras.extra.map((ext, i) => (
-                    <div className="app__cart__items__item__extras" key={i}>
-                      <div className="app__cart__items__item__extras__content">
-                        <p className="app__cart__items__item__extras__name">
+                    <div className="app__mobile__cart__item__extras" key={i}>
+                      <div className="app__mobile__cart__item__extras__header">
+                        <p className="app__mobile__cart__item__extras__name">
                           {ext.name}
                         </p>
-                        <p className="app__cart__items__item__extras__price">
+                        <p className="app__mobile__cart__item__extras__price">
                           {" "}
                           {ext.price}
                         </p>
                       </div>
 
                       <button
-                        className="app__cart__items__item__extras__btn"
+                        className="app__mobile__cart__item__extras__btn"
                         onClick={() => removeExtras(index, i)}
                       >
-                        <AiOutlineMinusCircle />
+                        Remove extra ingredient
                       </button>
                     </div>
                   ))}
-                  <div className="app__cart__items__btncontainer">
+                  <div className="app__mobile__cart__items__btncontainer">
                     <button
-                      className="app__cart__items__btncontainer__btn"
+                      className="app__mobile__cart__items__btncontainer__btn"
                       onClick={() => removeFromCart(cart[item], index)}
                     >
                       Remove From Cart
@@ -110,14 +99,14 @@ const Cart = () => {
 
             {cart.length > 0 && (
               <div>
-                <div className="app__cart__items__total">
-                  <p> Total : {calculateTotalSpent()}</p>
+                <div className="app__mobile__cart__total">
+                  <p> Total : {priceTotal()}</p>
                 </div>
-                <div className="app__cart__items__total">
+
+                <div className="app__mobile__cart__total">
                   <Link
-                    className="app__cart__items__total__btn"
+                    className="app__mobile__cart__total__btn"
                     to="/Checkout"
-                    onClick={() => setToggle(!toggle)}
                   >
                     Checkout
                   </Link>
@@ -126,20 +115,17 @@ const Cart = () => {
             )}
 
             {cart.length === 0 && (
-              <div className="app__cart__items__item">
-                <p className="app__cart__items__item__empty">
+              <div className="app__mobile__cart__empty">
+                <p className="app__mobile__cart__empty__desc">
                   {" "}
-                  No items in cart
+                  Cart is empty
                 </p>
               </div>
             )}
-
-          </motion.div>
-
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
-
 export default Cart;
