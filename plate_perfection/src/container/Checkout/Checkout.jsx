@@ -34,7 +34,7 @@ const Checkout = () => {
 
   return (
     <div className="app__checkout">
-      <div className="app__master-container">
+      <div className="app__main__container">
         <motion.div
           whileInView={{ y: [-100, 0], opacity: [0, 1] }}
           transition={{ duration: 1 }}
