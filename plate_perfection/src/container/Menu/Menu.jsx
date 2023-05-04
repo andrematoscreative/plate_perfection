@@ -85,7 +85,7 @@ const Menu = () => {
                 <p className="app__menu-card-info-details">Click for more details</p>
                 <p className="app__menu-card-info-price">{item.price}</p>
 
-                {/* <button className="app__menu-card-info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button> */}
+                
               </div>
 
             </Link>
