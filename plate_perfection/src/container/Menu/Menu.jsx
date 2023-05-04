@@ -15,8 +15,16 @@ const Menu = () => {
     setItemsToShow(itemsToShow + itemsToShow);
   };
 
+  /* const filteredProductData = productData.filter((item) => {
+    return item.category.toLowerCase().includes(searchTerm.toLowerCase());
+  }); */
+
   const filteredProductData = productData.filter((item) => {
-    return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const search = searchTerm.toLowerCase();
+    const category = item.category.toLowerCase();
+    const name = item.name.toLowerCase();
+  
+    return category.includes(search) || name.includes(search);
   });
 
   const AddToCart = (item) => {
@@ -76,8 +84,8 @@ const Menu = () => {
                 <p className="app__menu-card-info-description">{item.description}</p>
                 <p className="app__menu-card-info-details">Click for more details</p>
                 <p className="app__menu-card-info-price">{item.price}</p>
-                
-                <button className="app__menu-card-info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button>
+
+                {/* <button className="app__menu-card-info-add-to-cart-button" onClick={() => AddToCart(item)}>Add item</button> */}
               </div>
 
             </Link>
