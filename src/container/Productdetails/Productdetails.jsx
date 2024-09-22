@@ -93,6 +93,7 @@ const Productdetails = ({ card, onClose, item }) => {
                   className="app__menu-card-details-info-container-name-line">
                 </motion.div>
               </div>
+                <button className="app__menu-card-details-info-container-add__to-cart-button" onClick={() => setToggle(!toggle)}>Add to Order</button>
                 <p className="app__menu-card-details-info-container-description">{product.description}</p>
                 <p className="app__menu-card-details-info-container-body">{product.body}</p>
                 <p className="app__menu-card-details-info-container-price">{product.price}</p> 
@@ -107,7 +108,6 @@ const Productdetails = ({ card, onClose, item }) => {
                 </div>
                 ))}
 
-                <button className="app__menu-card-details-info-container-add__to-cart-button" onClick={() => setToggle(!toggle)}>Add to Order</button>
             </motion.div>
               
               <motion.div
@@ -145,10 +145,9 @@ const Productdetails = ({ card, onClose, item }) => {
             }}
           />
           <motion.div
-            whileInView={{ x: [70, 0], opacity: [0, 1]}}
+            whileInView={{ x: [20, 0], opacity: [0, 1]}}
             transition={{ duration: 1, ease: 'easeInOut'}}
-            className="app__menu-card-details-extras-container"
-          >
+            className="app__menu-card-details-extras-container">
             <h1 className="app__menu-card-details-extras-container-title">
             Would you like additional ingredients with your order?{" "}
             </h1>

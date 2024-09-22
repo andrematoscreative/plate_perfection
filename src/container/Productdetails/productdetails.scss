@@ -16,7 +16,7 @@
 
         &-container {
             background-color: var( --background-color);
-            position: absolute;
+            position: fixed;
             width: 330px;
             height: 510px;
             top: 20%;
@@ -232,13 +232,14 @@
         &-line {
             
             height: 1px;
-            margin-top: 0.3rem;
-            margin-bottom: 1.3rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
             background-color: var(--primary-color-soft);
         }
     }
 
     &-description {
+        margin-top: 20px;
         font-size: 1rem;
         font-weight: 300;
         font-style: italic;
