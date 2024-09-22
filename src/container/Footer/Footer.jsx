@@ -26,12 +26,6 @@ const Footer = () => {
               </a>
             </div>
             
-            <motion.div
-            whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 2 }}
-            className='app__footer-copyright-line__bottom'>
-            </motion.div>
-            
             <div className="plate_perfection-copyright">
               <img className="plate_perfection-copyright-logo"
               src={images.plate_perfection_logo}

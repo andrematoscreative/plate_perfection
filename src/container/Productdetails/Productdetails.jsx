@@ -40,6 +40,10 @@ const Productdetails = ({ card, onClose, item }) => {
     setCart(cart);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const addExtras = (item) => {
     extras.push({ name: item.name, price: item.price, quantity: item.quantity +1 });
     setExtraAdded(true)

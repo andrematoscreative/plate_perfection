@@ -137,9 +137,11 @@
                 border-radius: 10px;
                 background-color: transparent;
                 font-weight: 200;
+                caret-color: var(--primary-color);
             }
 
             .app__contact-container-form-subscribe-button {
+                text-decoration: none;
                 width: 100%;
                 max-width: 400px; 
                 padding: 0.8rem;
@@ -187,6 +189,7 @@
     }
 
     &-reservation-button_2 {
+        text-decoration: none;
         width: 200px;
         padding: 0.8rem;
         font-family: var(--font-secondary);

@@ -66,6 +66,7 @@
         background-color: transparent;
         border: 1px solid var(--primary-color-soft);
         color: var(--primary-color);
+
         
         &::placeholder {
             color: var(--primary-color-soft);
@@ -158,24 +159,19 @@
         font-size: 1.3rem;
         font-style: italic;
         font-weight: 600;
-        margin-bottom: 1rem;
         line-height: 1.7rem;
 
         @media (max-width: 450px) {
             font-size: 0.8rem;
-            margin-bottom: 0.4rem;
             line-height: 1.2rem;
         }
 
         &-line{
             position: relative;
-            margin-top: 0.4rem;
             height: 1px;
+            width:100%;
             background-color: var(--primary-color-soft);
 
-            @media (max-width: 450px) {
-                margin-top: 0.3rem;
-            }
         }
     }
 

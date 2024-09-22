@@ -66,7 +66,7 @@ const Menu = () => {
         </div>
         
         <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-35, 0], opacity: [0, 1] }}
         transition={{ duration: 1.3 }}
         className="app__menu-cards-container">
         {filteredProductData.slice(0, itemsToShow).map((item) => (
@@ -79,8 +79,8 @@ const Menu = () => {
               
               <div className="app__menu-card-info">
                 <div className="app__menu-card-info-name">{item.name}
-                  <div className='app__menu-card-info-name-line'/>
                 </div>
+                  <div className='app__menu-card-info-name-line'/>
                 <p className="app__menu-card-info-description">{item.description}</p>
                 <p className="app__menu-card-info-details">Click for more details</p>
                 <p className="app__menu-card-info-price">{item.price}</p>
