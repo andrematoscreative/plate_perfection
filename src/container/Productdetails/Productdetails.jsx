@@ -61,7 +61,7 @@ const Productdetails = ({ card, onClose, item }) => {
 
           <div className="app__menu-card-details-header">
             <motion.div  
-            whileInView={{ y: [-35, 0], opacity: [0, 1] }}
+            whileInView={{ y: [-30, 0], opacity: [0, 1] }}
             transition={{ duration: 2, ease: 'easeInOut' }} 
             className='app__menu-card-details-header-title'>
               <img className="app__menu-card-details-header-title-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
