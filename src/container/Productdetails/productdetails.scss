@@ -129,8 +129,12 @@
     position: relative;
     flex-direction: column;
 
-    @media (max-width: 1199px) {
-        margin-bottom: 3rem;
+    @media (max-width: 899px) {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 515px) {
+        margin-bottom: 30px;
     }
 }
 
@@ -346,5 +350,11 @@
         height: 1.5rem;
         cursor: pointer;
         margin-bottom: 25px;
+
+        &:hover {
+            color: var(--primary-color-bright);
+            transition: color 0.3s ease;
+            filter: drop-shadow(0 0 5px var(--primary-color-bright));
+        }
     }
 }
