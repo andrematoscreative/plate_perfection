@@ -6,7 +6,7 @@
   --primary-color: #EDDBAD;
   --primary-color-soft: rgba(255, 243, 211, 0.31);
   --primary-color-bright: rgba(255, 243, 211, 0.955);
-  --background-color: #191C20;
+  --background-color: #1c1c1c;
   --background-color-soft:rgba(25, 25, 25, 0.772);
 }
 
@@ -15,5 +15,6 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  user-select: none;
 }
 

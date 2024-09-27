@@ -37,6 +37,9 @@ const Navbar = ({ active }) => {
             <li className={`${active === 'Home' ? 'active' : ''}`}>
               <Link to='/#home'>Home</Link>
             </li>
+            <li className={`${active === 'About' ? 'active' : ''}`}>
+              <Link to='/#About'>About</Link>
+            </li>
             <li className={`${active === 'Menu' ? 'active' : ''}`}>
               <Link to='/#menu'>Menu</Link>
             </li>
@@ -67,6 +70,11 @@ const Navbar = ({ active }) => {
                   <li>
                     <Link to='/#home' onClick={() => { setToggle(false); }}>
                       Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/#About' onClick={() => { setToggle(false); }}>
+                      About
                     </Link>
                   </li>
                   <li>

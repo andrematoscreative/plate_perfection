@@ -38,7 +38,7 @@ const productData = [
         category: "Meat",
         image: `${images.plate2}`,
         description: "Our bold and exquisite Angus burger",
-        body: '"Black Angus meat is one of the most flavoursome bovine meats. It’s moist and tenderness provide a delicious experience in addition to great seasoning and cooking techniques to make this burger a masterpiece. Served between two slices of soft toasted buns, the two Angus burgers (200g) have two different sauces (mustard and curry), two types of cheese: American and Monterey Jack and are seasoned with truffle mayonnaise."',
+        body: '"Black Angus meat is one of the most flavorsome bovine meats. It’s moist and tenderness provide a delicious experience in addition to great seasoning and cooking techniques to make this burger a masterpiece. Served between two slices of soft toasted buns, the two Angus burgers (200g) have two different sauces (mustard and curry), two types of cheese: American and Monterey Jack and are seasoned with truffle mayonnaise."',
         price: "€ 45,99",
         extras: [
             {
@@ -223,8 +223,8 @@ const productData = [
         id: 8,
         category: "Fish",
         image: `${images.plate8}`,
-        description: "Brased tuna Tataki with sesame seeds",
-        body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."',
+        description: "Our delicate tuna tataki with a crunchy and colourful salad",
+        body: '"Our fresh brased tuna with sesame seeds (white +brown + black) is a delicacy on the mouth. Served with egg curry and vegetables from our own private backyard, such as radish; carrots; green beans and enoki mushrooms, this mix is a pleasure to the eyes and mouth."',
         price: "€ 38,99",
         extras: [
             {
@@ -238,7 +238,7 @@ const productData = [
                 id: 2,
             },
             {
-                name: "Extra Citrus sauce",
+                name: "Extra Citric sauce",
                 price: "€ 2.99",
                 id: 3,
             },
@@ -254,8 +254,8 @@ const productData = [
         id: 9,
         category: "Meat",
         image: `${images.plate9}`,
-        description: "Grilled Veal steak with soft boiled eggs and chimichurri",
-        body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."',
+        description: "Our special steak, a masterpiece for meat lovers",
+        body: '"Don’t be misguided by the minimal look of this steak.  Sprinkled with our mix of secret spices and its previous marinade It’s a feast of flavours This grilled veal steak keeps its magnificent tenderness througout its wise cooking process. It is served with soft boiled eggs and a fresh chimichurri on the side."',
         price: "€ 54,45€",
         extras: [
             {
@@ -285,30 +285,30 @@ const productData = [
         id:10,
         category: "appetizers",
         image: `${images.plate10}`,
-        description: "Delicious descriptive text to entice the client to click",
-        body: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."',
+        description: "Our selected cheeses and sausages to share around the table",
+        body: '"A board filled with cheeses, (brie, goat cheese with pepper, aged cheddar, manchego and fontina), thinly sliced italian salami, (prosciutto, soppressata and pepperoni), duck foie gras, sour olives in artisanal olive oil, roasted pistachios, pickled gherkins, fresh grapes, and poached apricot and pumpkin, all to be shared with pindulgence around the table. Served with rustic bread and crackers."',
         price: "€ 40,50",
         extras: [
             {
-                name: "Extra Thin and crisp fries with seasoning",
+                name: "Extra Crostini",
                 price: "€ 3.99",
                 id: 1,
             },
             {
-                name: "Extra Thin and crisp fries with seasoning",
+                name: "Extra Rosemary honey",
                 price: "€ 2.99",
                 id: 2,
             },
             {
-                name: "Extra Thin and crisp fries with seasoning",
-                price: "€ 1.99",
+                name: "Extra Spiced Plum jam",
+                price: "€ 2.99",
                 id: 3,
             },
         ],
         Ingredients: [{
-            Ingredient1 : "Ingredient 1",
-            Ingredient2 : "Ingredient 2",
-            Ingredient3 : "Ingredient 3",
+            Ingredient1 : "+ Crostini",
+            Ingredient2 : "+ Rosemary honey",
+            Ingredient3 : "+ spiced Plum jam",
         }]
     },
 ]

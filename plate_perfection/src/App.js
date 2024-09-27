@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Navbar, Principal, Productdetails, Cart, Reservation, Checkout } from './container';
+import { Navbar, Principal, About, Productdetails, Cart, Reservation, Checkout } from './container';
 import MyContext from './container/context';
 import './app.scss';
 
