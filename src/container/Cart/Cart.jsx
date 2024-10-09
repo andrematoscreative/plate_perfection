@@ -7,6 +7,7 @@ const Cart = () => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
+
   const storage = localStorage.getItem("cart");
 
   const removeFromCart = (id, i) => {
@@ -15,13 +16,13 @@ const Cart = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
     if (updatedCart.length === 0) {
-      localStorage.clear();
+      localStorage.removeItem("cart");
     }
   };
 
-  function removeExtras(item, extraIndex) {
-    const updatedCart = Object.values(cart);
-    updatedCart[item].extras.extra.splice(extraIndex, 1);
+  function removeExtras(itemIndex, extraIndex) {
+    const updatedCart = [...cart]; // Avoid direct mutation
+    updatedCart[itemIndex].extras.extra.splice(extraIndex, 1);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
@@ -53,6 +54,7 @@ const Cart = () => {
             />
             <h1 className="app__mobile__cart__header__title">Cart</h1>
           </div>
+
           <div className="app__mobile__cart__items">
             {cart.map((item, index) => (
               <div className="app__mobile__cart__item" key={item.id}>
@@ -72,7 +74,6 @@ const Cart = () => {
                           {ext.name}
                         </p>
                         <p className="app__mobile__cart__item__extras__price">
-                          {" "}
                           {ext.price}
                         </p>
                       </div>
@@ -85,10 +86,11 @@ const Cart = () => {
                       </button>
                     </div>
                   ))}
+
                   <div className="app__mobile__cart__items__btncontainer">
                     <button
                       className="app__mobile__cart__items__btncontainer__btn"
-                      onClick={() => removeFromCart(cart[item], index)}
+                      onClick={() => removeFromCart(item.id, index)}
                     >
                       Remove From Cart
                     </button>
@@ -100,7 +102,7 @@ const Cart = () => {
             {cart.length > 0 && (
               <div>
                 <div className="app__mobile__cart__total">
-                  <p> Total : {priceTotal()}</p>
+                  <p>Total : {priceTotal()}</p>
                 </div>
 
                 <div className="app__mobile__cart__total">
@@ -116,10 +118,7 @@ const Cart = () => {
 
             {cart.length === 0 && (
               <div className="app__mobile__cart__empty">
-                <p className="app__mobile__cart__empty__desc">
-                  {" "}
-                  Cart is empty
-                </p>
+                <p className="app__mobile__cart__empty__desc">Cart is empty</p>
               </div>
             )}
           </div>
@@ -128,4 +127,5 @@ const Cart = () => {
     </div>
   );
 };
+
 export default Cart;
