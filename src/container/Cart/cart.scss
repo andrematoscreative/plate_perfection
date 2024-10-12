@@ -32,6 +32,13 @@
     @media (max-width: 515px) {
         padding: 10px;
     }
+
+    @media screen and (max-width: 515px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+
   }
 .app__mobile__cart__header {
     display: flex;
