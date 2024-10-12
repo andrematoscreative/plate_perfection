@@ -35,6 +35,10 @@
         padding-left:15px;
         padding-right:15px;
     }
+
+    @media screen and (max-width: 515px) {
+        padding-bottom: 6px;
+    }
 }
 
 .app__navbar-logo {
