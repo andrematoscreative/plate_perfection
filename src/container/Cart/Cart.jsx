@@ -38,7 +38,7 @@ const Cart = () => {
     });
     return total.toFixed(2) + "€";
   };
-
+///so start on top of the page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -50,24 +50,24 @@ const Cart = () => {
   return (
     <div className="app__mobile-cart">
       <div className="app__master-container">
-        <div className="app__mobile__cart__container">
           <div className='app__mobile__cart__header'>
-              <motion.div
-                whileInView={{ y: [-35, 0], opacity: [0, 1] }}
-                transition={{ duration: 2 }}
-                className='app__mobile__cart__header__title-title'>
+            <motion.div
+            whileInView={{ y: [-25, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className='app__mobile__cart__header__title'>
               <img
-                className='app__mobile__cart__header__logo'
-                src={images.plate_perfection_logo}
-                alt='plate_perfection_logo'/>
-              <h1 className='app__mobile__cart__header__title'>Cart</h1>
+              className='app__mobile__cart__header__title-logo'
+              src={images.plate_perfection_logo}
+              alt='plate_perfection_logo'/>
+              <h1 className='app__mobile__cart__header__title-title'>Cart</h1>
               <motion.div
                 whileInView={{ scale: [0, 1] }}
                 transition={{ duration: 3 }}
-                className='app__mobile__cart__header__title__line'
+                className='app__mobile__cart__header__title-line'
               ></motion.div>
             </motion.div>
           </div>
+        <div className="app__mobile__cart__container">
           <div className="app__mobile__cart__items">
             {cart.map((item, index) => (
               <div className="app__mobile__cart__item" key={item.id}>
