@@ -88,7 +88,7 @@ const Navbar = ({ active }) => {
                     </Link>
                   </li>
                   <li className={`cart__mobile ${active === 'Cart' ? 'active' : ''}`}>
-                    <Link className ='cart-mobile-link'to='/Cart'>
+                    <Link className ='cart-mobile-link'to='/Cart' onClick={() => { setToggle(false); }}>
                       Cart
                       <HiOutlineShoppingCart /> <p className="app__hmenu-cartcounter">{cart.length}</p>
                     </Link>
