@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./cart.scss";
 import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { images } from "../../constants";
+import MyContext from "../context";
 
 const Cart = () => {
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || []
-  );
+  const { cart, setCart } = useContext(MyContext); // Using cart and setCart from MyContext
 
-  const storage = localStorage.getItem("cart");
-
+  // Function to remove an item from the cart
   const removeFromCart = (id, i) => {
     const updatedCart = cart.filter((item, index) => index !== i);
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    setCart(updatedCart); // Update context state
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Sync with localStorage
 
     if (updatedCart.length === 0) {
       localStorage.removeItem("cart");
     }
   };
 
-  function removeExtras(itemIndex, extraIndex) {
-    const updatedCart = [...cart]; // Avoid direct mutation
+  // Function to remove extras from an item in the cart
+  const removeExtras = (itemIndex, extraIndex) => {
+    const updatedCart = [...cart];
     updatedCart[itemIndex].extras.extra.splice(extraIndex, 1);
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  }
+    setCart(updatedCart); // Update context state
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Sync with localStorage
+  };
 
+  // Calculate the total price of the cart
   const priceTotal = () => {
     let total = 0;
     cart.forEach((item) => {
@@ -38,35 +38,34 @@ const Cart = () => {
     });
     return total.toFixed(2) + "€";
   };
-///so start on top of the page
+
+  // Scroll to the top of the page when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem("cart")) || []);
-  }, [storage]);
-
   return (
     <div className="app__mobile-cart">
       <div className="app__master-container">
-          <div className='app__mobile__cart__header'>
-            <motion.div
+        <div className="app__mobile__cart__header">
+          <motion.div
             whileInView={{ y: [-25, 0], opacity: [0, 1] }}
             transition={{ duration: 2 }}
-            className='app__mobile__cart__header__title'>
-              <img
-              className='app__mobile__cart__header__title-logo'
+            className="app__mobile__cart__header__title"
+          >
+            <img
+              className="app__mobile__cart__header__title-logo"
               src={images.plate_perfection_logo}
-              alt='plate_perfection_logo'/>
-              <h1 className='app__mobile__cart__header__title-title'>Cart</h1>
-              <motion.div
-                whileInView={{ scale: [0, 1] }}
-                transition={{ duration: 3 }}
-                className='app__mobile__cart__header__title-line'
-              ></motion.div>
-            </motion.div>
-          </div>
+              alt="plate_perfection_logo"
+            />
+            <h1 className="app__mobile__cart__header__title-title">Cart</h1>
+            <motion.div
+              whileInView={{ scale: [0, 1] }}
+              transition={{ duration: 3 }}
+              className="app__mobile__cart__header__title-line"
+            ></motion.div>
+          </motion.div>
+        </div>
         <div className="app__mobile__cart__container">
           <div className="app__mobile__cart__items">
             {cart.map((item, index) => (
