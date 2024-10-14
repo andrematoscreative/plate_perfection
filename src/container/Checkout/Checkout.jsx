@@ -1,4 +1,4 @@
-/* import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./checkout.scss";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
@@ -33,22 +33,29 @@ const Checkout = () => {
   }, [storage]);
 
   return (
-    <div className="app__checkout">
-      <div className="app__main__container">
+    <div className="app__checkout app__master-container">
+      <div className="app__main-container">
+      <div className="app__checkout-header">
+          <motion.div
+            whileInView={{ y: [-25, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+            className="app__checkout-header-title"
+          >
+            <img
+              className="app__checkout-header-title-logo"
+              src={images.plate_perfection_logo}
+              alt="plate_perfection_logo"
+            />
+            <h1 className="app__checkout-header-title-title">Checkout</h1>
+            <motion.div
+              whileInView={{ scale: [0, 1] }}
+              transition={{ duration: 3 }}
+              className="app__checkout-header-title-line"
+            ></motion.div>
+          </motion.div>
+        </div>
         <motion.div
-          whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-          transition={{ duration: 1 }}
-          className="app__checkout__header"
-        >
-          <img
-            className="app__checkout__header__logo"
-            src={images.plate_perfection_logo}
-            alt="logo"
-          />
-          <h1 className="app__checkout__header__title">Checkout </h1>
-        </motion.div>
-        <motion.div
-          whileInView={{ y: [100, 0], opacity: [0, 1] }}
+          whileInView={{ y: [20, 0], opacity: [0, 1] }}
           transition={{ duration: 1 }}
           className="app__checkout__container"
         >
@@ -146,4 +153,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
- */
