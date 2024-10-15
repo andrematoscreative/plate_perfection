@@ -34,23 +34,23 @@ const Checkout = () => {
 
   return (
     <div className="app__checkout app__master-container">
-      <div className="app__main-container">
-      <div className="app__checkout-header">
+      <div className="app__checkout-container">
+      <div className="app__checkout-container-header">
           <motion.div
             whileInView={{ y: [-25, 0], opacity: [0, 1] }}
             transition={{ duration: 2 }}
-            className="app__checkout-header-title"
+            className="app__checkout-container-header-title"
           >
             <img
-              className="app__checkout-header-title-logo"
+              className="app__checkout-container-header-title-logo"
               src={images.plate_perfection_logo}
               alt="plate_perfection_logo"
             />
-            <h1 className="app__checkout-header-title-title">Checkout</h1>
+            <h1 className="app__checkout-container-header-title-title">Checkout</h1>
             <motion.div
               whileInView={{ scale: [0, 1] }}
               transition={{ duration: 3 }}
-              className="app__checkout-header-title-line"
+              className="app__checkout-container-header-title-line"
             ></motion.div>
           </motion.div>
         </div>
