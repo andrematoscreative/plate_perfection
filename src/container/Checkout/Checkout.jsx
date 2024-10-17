@@ -33,14 +33,15 @@ const Checkout = () => {
   }, [storage]);
 
   return (
-    <div className="app__checkout app__master-container">
-      <div className="app__checkout-container">
-      <div className="app__checkout-container-header">
+    <div className="app__checkout">
+      
+      <div className="app__checkout-container app__master-container">
+        
+        <div className="app__checkout-container-header">
           <motion.div
             whileInView={{ y: [-25, 0], opacity: [0, 1] }}
             transition={{ duration: 2 }}
-            className="app__checkout-container-header-title"
-          >
+            className="app__checkout-container-header-title">
             <img
               className="app__checkout-container-header-title-logo"
               src={images.plate_perfection_logo}
@@ -50,78 +51,76 @@ const Checkout = () => {
             <motion.div
               whileInView={{ scale: [0, 1] }}
               transition={{ duration: 3 }}
-              className="app__checkout-container-header-title-line"
-            ></motion.div>
+              className="app__checkout-container-header-title-line">
+            </motion.div>
           </motion.div>
         </div>
+
         <motion.div
-          whileInView={{ y: [20, 0], opacity: [0, 1] }}
-          transition={{ duration: 1 }}
-          className="app__checkout__container"
-        >
+        whileInView={{ y: [20, 0], opacity: [0, 1] }}
+        transition={{ duration: 1 }}
+        className="app__checkout-container-content">
           <div>
-            <h1 className="app__checkout__form__title">Personal Information</h1>
-            <form onSubmit={submitOrder} className="app__checkout__form">
-              <input
-                className="app__checkout__form__text"
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required
-              ></input>
-              <input
-                className="app__checkout__form__text"
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-              ></input>
-              <input
-                className="app__checkout__form__text"
-                type="tel"
-                id="phone"
-                placeholder="Enter your phone number"
-                required
-              ></input>
-              <input
-                className="app__checkout__form__text"
-                type="text"
-                id="address"
-                placeholder="Enter your address"
-                required
-              ></input>
-              <input
-                className="app__checkout__form__btn"
-                type="submit"
-                value="Submit"
-                disabled={cart.length=== 0}
-              ></input>
+            <h1 className="app__checkout-container-content-form-title">Personal Information</h1>
+            <form onSubmit={submitOrder} className="app__checkout-container-content-form">
+              <div className="app__checkout-container-content-form-text">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                ></input>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                ></input>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  required
+                ></input>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Enter your address"
+                  required
+                ></input>
+                </div>
+                <input
+                  className="app__checkout-form-btn"
+                  type="submit"
+                  value="Submit"
+                  disabled={cart.length=== 0}
+                ></input>
             </form>
           </div>
 
-          <div className="app__checkout__cart">
-            <div className="app__checkout__cart__container">
-              <div className="app__checkout__cart__items">
+          <div className="app__checkout-cart">
+            <div className="app__checkout-cart-container"> {/* cart */}
+              <div className="app__checkout-cart-items">
                 <div>
                 {cart.map((item, i) => (
-                  <div className="app__checkout__cart__item" key={item.id}>
-                    <div className="app__checkout__cart__item__header">
-                      <p className="app__checkout__cart__item__header__name">
+                  <div className="app__checkout-cart-item" key={item.id}>
+                    <div className="app__checkout-cart-item-header">
+                      <p className="app__checkout-cart-item-header-name">
                         {item.name}
                       </p>
-                      <p className="app__checkout__cart__item__header__price">
+                      <p className="app__checkout-cart-item-header-price">
                         {item.price}
                       </p>
                     </div>
                     <div>
-                      <div className="app__checkout__cart__item__extras">
+                      <div className="app__checkout-cart-item-extras">
                         {item.extras.extra.map((ext, i) => (
                           <div key={i}>
-                            <div className="app__checkout__cart__item__extras__header">
-                              <p className="app__checkout__cart__item__extras__header__name">
+                            <div className="app__checkout-cart-item-extras-header">
+                              <p className="app__checkout-cart-item-extras-header-name">
                                 {ext.name}
                               </p>
-                              <p className="app__checkout__cart__item__extras__header__price">
+                              <p className="app__checkout-cart-item-extras-header-price">
                                 {" "}
                                 {ext.price}
                               </p>
@@ -134,20 +133,23 @@ const Checkout = () => {
                 ))}
                 </div>
                 {cart.length > 0 && (
-                  <div className="app__checkout__cart__items__total">
+                  <div className="app__checkout-cart-items-total">
                     <p> Total : {calculateTotalSpent()}</p>
                   </div>
                 )}
                 {orderSubmit  && 
-                <p className="app__checkout__cart__empty">Thank you for ordering with us!</p>
+                <p className="app__checkout-cart-empty">Thank you for ordering with us!</p>
                 }
-                {cart.length === 0 && orderSubmit === false && <p className="app__checkout__cart__empty"> No items to checkout</p>}
+                {cart.length === 0 && orderSubmit === false && <p className="app__checkout-cart-empty"> No items to checkout</p>}
               </div>
             </div>
           </div>
+
         </motion.div>
+
       </div>
-      <img className="app__checkout__bg" src={images.logo_cream} alt="logo" />
+      {/*<img className="app__checkout-background" src={images.c} alt="background" />*/}
+
     </div>
   );
 };

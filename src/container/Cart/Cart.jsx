@@ -62,11 +62,13 @@ const Cart = () => {
             <motion.div
               whileInView={{ scale: [0, 1] }}
               transition={{ duration: 3 }}
-              className="app__mobile__cart__header__title-line"
-            ></motion.div>
+              className="app__mobile__cart__header__title-line"></motion.div>
           </motion.div>
         </div>
-        <div className="app__mobile__cart__container">
+        <motion.div
+        whileInView={{ y: [20, 0], opacity: [0, 1] }}
+        transition={{ duration: 1 }} 
+        className="app__mobile__cart__container">
           <div className="app__mobile__cart__items">
             {cart.map((item, index) => (
               <div className="app__mobile__cart__item" key={item.id}>
@@ -134,7 +136,7 @@ const Cart = () => {
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
