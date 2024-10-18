@@ -67,55 +67,54 @@
         @media (max-width: 515px) {
             padding:10px;
         }
+        
+        &-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 1;
+            
+            &-title {
+                font-weight: 400;
+                font-size: 1.7rem;
+                margin-bottom: 2rem;
+                font-family: var(--secondary-font);
+            }
+            
+            &-text {
+                border: none;
+                padding: .7rem 1rem;
+                border-radius: 5px;
+                font-family: var(--secondary-font);
+                
+                &:focus{
+                    outline: none;
+                 }
+            }
+    
+            &-btn {
+                text-decoration: none;
+                width: 200px;
+                padding: 0.8rem;
+                font-family: var(--font-secondary);
+                font-size: 1rem;
+                border-radius: 10px;
+                border: 1px solid var(--primary-color-soft);
+                color: var(--primary-color);
+                background-color: transparent;
+                text-align: center;
+                display: block;
+                margin-top: 2rem;
+    
+                &:hover {
+                    color: var(--primary-color);
+                    box-shadow: 0 0 5px var(--primary-color-bright);
+                }
+    
+            }
     }
     
-    &-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 30%;
-        z-index: 1;
-        background-color: red;
-        
-        &-title {
-            font-weight: 400;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-        
-        &-text {
-            background-color: var(--cream-color);
-            border: none;
-            padding: .7rem 1rem;
-            border-radius: 5px;
-            font-family: var(--secondary-font);
-            
-            &:focus{
-                outline: none;
-             }
-        }
-
-        &-btn {
-            text-decoration: none;
-        width: 200px;
-        padding: 0.8rem;
-        font-family: var(--font-secondary);
-        font-size: 1rem;
-        border-radius: 10px;
-        border: 1px solid var(--primary-color-soft);
-        color: var(--primary-color);
-        background-color: transparent;
-        text-align: center;
-        display: block;
-        margin-top: 2rem;
-
-            &:hover {
-                color: var(--primary-color);
-                box-shadow: 0 0 5px var(--primary-color-bright);
-            }
-
-        }
-    }
+}
 
     &__cart {
         &__container {
