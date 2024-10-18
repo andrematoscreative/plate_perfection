@@ -57,10 +57,10 @@
         border: 1px solid var(--primary-color);
         padding: 20px;
         border-radius: 10px;
-        max-height: 600px;
+        max-height: fit-content;
         
         @media (max-width: 515px) {
-            padding:10px;
+            padding:5px;
             flex-direction: column;
         }
         
@@ -92,9 +92,10 @@
                 text-decoration: none;
                 width: 200px;
                 padding: 0.8rem;
+                margin-bottom: 1rem;
                 font-family: var(--font-secondary);
                 font-size: 1rem;
-                border-radius: 10px;
+                border-radius: 5px;
                 border: 1px solid var(--primary-color-soft);
                 color: var(--primary-color);
                 background-color: transparent;
@@ -113,18 +114,29 @@
 }
 
     &-cart {
+        
         &-container {
-
-            border-radius: 10px;
+            border-radius: 5px;
             border: 1px solid var(--primary-color-soft);
             width: 30rem;
-            overflow-y: hidden;
+            max-height: 50vh;
+            overflow-y: auto;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+
+            &::-webkit-scrollbar {
+                display: none; /* For Chrome, Safari, and Opera */
+            }
+
+            @media (max-width: 515px) {
+                width: fit-content;
+                max-height: 40vh;
+            }
             
         }
         
         &-empty {
             font-style: italic;
-            color: var(--cream-color);
             text-align: center;
             font-size: 1.2rem;
         }
@@ -132,20 +144,15 @@
         &-items {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
-
 
             &-total {
                 background-color: transparent;
                 margin: 2rem 0 0;
                 text-align: right;
-                color: var(--darkgrey-color);
-                width: 100%;
-                
+                width: 100%;                
         
                 p {
                     border-radius: 10px;
-                    background-color: var(--cream-color);
                     display: inline-block;
                     padding: 1rem;
                     font-size: 1.2rem;
@@ -155,54 +162,53 @@
             }
     }
     
-    &__item {
-        background-color: var(--cream-color);
-            margin-bottom: 1rem;
-            font-family: var(--font-headland);
-            position: relative;
-            padding: 1rem;
-            border-radius: 5px;
+    &-item {
+        
+        position: relative;
+        padding: 1rem;
+        border-radius: 5px;
             
             
-            &__header {
+            &-header {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
-                margin-bottom: 2rem;
-                color: var(--darkgrey-color);
+                font-family: var(--font-secondary);
+                justify-content: space-between;
+                margin-bottom: 0.8rem;
     
-                &__name {
+                &-name {
                     font-size: 1.5rem;
-                    font-style: italic;
-
+                    font-weight: bold;
                 }
                 
-                &__price {
+                &-price {
                     align-self: flex-end;
                     font-weight: 700;
-
+                    font-size: 1.3rem;
+                    font-family: var(--font-primary);
                 }
             }
     
-            &__extras{ 
+            &-extras{ 
         
-                &__header {
+                &-header {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     margin-bottom: 1rem;
-                    color: var(--darkgrey-color);
+                    justify-content: space-between;
                     
-                    &__name {
+                    &-name {
+                        margin-left: 10px;
                         font-size: 1rem;
                         font-style: italic;
-                        
-                        
-            
+                        font-family: var(--font-secondary);
                     }
             
-                    &__price {
+                    &-price {
+                        align-self: flex-end;
                         font-size: .8rem;
                         font-weight: 700;
+                        font-family: var(--font-primary);
                     }
 
 
@@ -210,7 +216,7 @@
                 }
 
         
-                &__btn {
+                &-btn {
                     background-color: transparent;
                     border: none;
                 }

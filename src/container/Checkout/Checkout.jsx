@@ -90,7 +90,7 @@ const Checkout = () => {
                 ></input>
                 </div>
                 <input
-                  className="app__checkout-form-btn"
+                  className="app__checkout-container-content-form-btn"
                   type="submit"
                   value="Submit"
                   disabled={cart.length=== 0}
