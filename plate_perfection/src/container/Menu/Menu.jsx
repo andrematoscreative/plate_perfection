@@ -15,8 +15,16 @@ const Menu = () => {
     setItemsToShow(itemsToShow + itemsToShow);
   };
 
+  /* const filteredProductData = productData.filter((item) => {
+    return item.category.toLowerCase().includes(searchTerm.toLowerCase());
+  }); */
+
   const filteredProductData = productData.filter((item) => {
-    return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const search = searchTerm.toLowerCase();
+    const category = item.category.toLowerCase();
+    const name = item.name.toLowerCase();
+  
+    return category.includes(search) || name.includes(search);
   });
 
   const AddToCart = (item) => {
@@ -27,17 +35,17 @@ const Menu = () => {
     <div id="menu" className='app__menu'>
       <div className="app__master-container">
 
-        <div className="app__menu-title">
+        <div className="app__menu-header">
           <motion.div  
           whileInView={{ y: [-35, 0], opacity: [0, 1] }}
           transition={{ duration: 2 }} 
-          className='app__menu-title-header'>
-            <img className="app__menu-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
-            <h1 className='menu-title'>Menu</h1>
+          className='app__menu-header-title'>
+            <img className="app__menu-header-title-logo" src={images.plate_perfection_logo} alt="plate_perfection_logo" />
+            <h1 className='app__menu-header-title-title'>Menu</h1>
             <motion.div
               whileInView={{ scale: [0, 1]  }}
               transition={{ duration: 2.5 }}
-              className='menu__title-line'>
+              className='app__menu-header-title-line'>
             </motion.div>
           </motion.div>
           
@@ -58,7 +66,7 @@ const Menu = () => {
         </div>
         
         <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        whileInView={{ x: [-35, 0], opacity: [0, 1] }}
         transition={{ duration: 1.3 }}
         className="app__menu-cards-container">
         {filteredProductData.slice(0, itemsToShow).map((item) => (
@@ -69,14 +77,15 @@ const Menu = () => {
                 <div className="app__menu-card-line"/>
               </div>
               
-              <div className="app__menu__card__info">
-                <div className="app__menu__card__info-name">{item.name}
-                  <div className='app__menu__card__info-name-line'/>
+              <div className="app__menu-card-info">
+                <div className="app__menu-card-info-name">{item.name}
                 </div>
-                <p className="app__menu__card__info-description">{item.description}</p>
-                <p className="app__menu__card__info-price">{item.price}</p>
-                <p className="app__menu__card__info-details">Click for more details</p>
-                <button className="app__menu__card__info-add-to-cart-button" onClick={() => AddToCart(item)}>Add to cart</button>
+                  <div className='app__menu-card-info-name-line'/>
+                <p className="app__menu-card-info-description">{item.description}</p>
+                <p className="app__menu-card-info-details">Click for more details</p>
+                <p className="app__menu-card-info-price">{item.price}</p>
+
+                
               </div>
 
             </Link>

@@ -1,12 +1,14 @@
 import React from 'react'
-import { Home, Menu, Contact } from '../../container';
+import { Home, About, Menu, Contact, Footer } from '../../container';
 
 const Principal = () => {
   return (
     <div id="home">
       <Home/>
+      <About/>
       <Menu/>
-      
+      <Contact/>
+      <Footer/>
     </div>
   )
 }
